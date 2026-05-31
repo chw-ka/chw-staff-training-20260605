@@ -1,0 +1,8 @@
+config/.env
+config/gcp-oauth.keys.json
+.DS_Store
+activity-2-watchdog/inbox/
+activity-2-watchdog/sorted/
+__pycache__/
+*.pyc
+activity-2-watchdog/.venv/

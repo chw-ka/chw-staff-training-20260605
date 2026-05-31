@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/Users/warren_chan/Projects/chw-staff-training-20260605"
+      ]
+    },
+    "google-drive": {
+      "command": "npx",
+      "args": ["-y", "@piotr-agier/google-drive-mcp"],
+      "env": {
+        "GOOGLE_DRIVE_OAUTH_CREDENTIALS": "/Users/warren_chan/Projects/chw-staff-training-20260605/config/gcp-oauth.keys.json"
+      }
+    }
+  }
+}

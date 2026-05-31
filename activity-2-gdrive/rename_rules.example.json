@@ -1,0 +1,29 @@
+{
+  "_comment": "Google Drive 整理規則 — 對應 samples/ 入面嘅亂碼檔名",
+  "inbox_folder_name": "CHW_Training_垃圾崗",
+  "output_folder_name": "CHW_Training_已整理",
+  "prefix": "【功課】",
+  "mappings": [
+    {
+      "source": "IMG_8742.jpg",
+      "student_name": "張小明",
+      "subject": "視覺藝術"
+    },
+    {
+      "source": "DSC_00341.jpg",
+      "student_name": "李美玲",
+      "subject": "視覺藝術"
+    },
+    {
+      "source": "homework_final_v3.pdf",
+      "student_name": "陳家樂",
+      "subject": "視覺藝術"
+    },
+    {
+      "source": "photo_20260528.png",
+      "student_name": "王小華",
+      "subject": "視覺藝術"
+    }
+  ],
+  "naming_pattern": "{prefix}_{student_name}_{subject}{extension}"
+}
