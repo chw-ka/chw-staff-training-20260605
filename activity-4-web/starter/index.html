@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-HK">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CHW Cursor 教學示範：互動小工具</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">CHW</div>
+      <div>
+        <h1>互動小工具：功課命名器</h1>
+        <p class="sub">純 HTML + CSS + JS，可直接放上 webhost（靜態檔）</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>輸入資料</h2>
+      <form id="form">
+        <div class="grid">
+          <label>
+            <span>學生姓名</span>
+            <input id="studentName" placeholder="例如：張小明" required />
+          </label>
+          <label>
+            <span>科目</span>
+            <input id="subject" placeholder="例如：視覺藝術" required />
+          </label>
+          <label>
+            <span>原檔名</span>
+            <input id="original" placeholder="例如：IMG_8742.jpg" required />
+          </label>
+          <label>
+            <span>前綴</span>
+            <input id="prefix" value="【功課】" required />
+          </label>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="primary">生成建議檔名</button>
+          <button type="button" id="reset" class="ghost">清除</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>輸出</h2>
+      <div class="output">
+        <div class="row">
+          <span class="label">建議檔名</span>
+          <code id="result">—</code>
+        </div>
+        <div class="row">
+          <span class="label">規則</span>
+          <code id="rule">{prefix}_{student}_{subject}.{ext}</code>
+        </div>
+        <div class="actions">
+          <button type="button" id="copy" class="secondary" disabled>複製到剪貼簿</button>
+        </div>
+        <p id="hint" class="hint">提示：呢個 demo 用嚟教「Agent 生成靜態網頁」同基本 JS 事件處理。</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>教學延伸</h2>
+      <ul class="list">
+        <li>改成「會議紀錄整理器」：貼入 transcript → 生成 minutes（可連 API）</li>
+        <li>加「班別 / 學號」欄位，統一命名格式</li>
+        <li>加入主題色、校徽、footer，示範設計系統</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>CHW Cursor Staff Training — Activity: HTML/CSS/JS</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

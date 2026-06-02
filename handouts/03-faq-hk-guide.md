@@ -31,7 +31,7 @@ A：唔一定。**DeepSeek** 可完成活動一、二；**Gemini** 擅長活動�
 
 1. https://aistudio.google.com/apikey → Create API Key
 2. Cursor Settings → Models → **Google API Key**
-3. Add model：`gemini-2.0-flash`
+3. Add model：`gemini-2.5-flash`
 
 ---
 
@@ -42,7 +42,7 @@ A：唔一定。**DeepSeek** 可完成活動一、二；**Gemini** 擅長活動�
 3. Cursor Settings → Models：
    - **OpenAI API Key** 欄貼 DeepSeek 的 `sk-...`
    - **Override Base URL**：`https://api.deepseek.com`
-   - Add model：`deepseek-chat`
+   - Add model：`deepseek-v4-flash`
 
 > 呢度嘅「OpenAI API Key」欄只係 Cursor 接口名稱，**唔代表用 OpenAI**。
 

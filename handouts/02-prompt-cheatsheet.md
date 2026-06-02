@@ -154,3 +154,32 @@ theme: default
 3. 用 MARP 做下週早會簡報
 
 詳見 `handouts/03-faq-hk-guide.md`。
+
+
+---
+
+## 活動四：生成 HTML + CSS + JS（延伸活動）
+
+> Model：建議 **deepseek-v4-flash**。
+> 生成靜態檔（無需 build），方便之後放 Share Drive 由 webhost 發佈。
+
+### 主推 Prompt
+
+```
+請幫我用純 HTML + CSS + Vanilla JS 寫一個教學用小網站，功能係「功課命名器」。
+
+要求：
+1. 輸出到 activity-4-web/output/，包含：index.html、styles.css、app.js
+2. UI 要現代、清晰、mobile responsive（兩欄 → 手機一欄）
+3. 表單欄位：學生姓名、科目、原檔名、前綴（預設【功課】）
+4. 按「生成」後顯示建議檔名：{prefix}_{student}_{subject}.{ext}
+5. 提供「複製到剪貼簿」按鈕（成功/失敗提示）
+6. 所有文字用香港繁中
+7. 最後請提供 5 條老師可以改嘅延伸功能點
+
+提示：我哋之後會放呢個 folder 去 share drive，由 webhost 靜態發佈。
+```
+
+### 發佈提示
+
+見 `handouts/07-static-site-publish.md`。

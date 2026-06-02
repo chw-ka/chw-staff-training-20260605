@@ -73,8 +73,8 @@ DeepSeek 係**按用量付費**，需預先充值少量金額：
 
 | Model 名稱 | 適合 |
 |------------|------|
-| `deepseek-chat` | 一般 Agent、寫 code、minutes |
-| `deepseek-reasoner` | 複雜推理（較慢、較貴） |
+| `deepseek-v4-flash` | 一般 Agent、寫 code、minutes |
+| `deepseek-v4-pro`（或兼容：`deepseek-reasoner`） | 複雜推理（較慢、較貴） |
 
 ---
 

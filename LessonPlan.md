@@ -19,7 +19,7 @@
 
 <br>(10") | 環境準備：<br>
 
-<br>駁通私家水喉 | **環境配置** | **對照筆記：** 開 [`handouts/05-api-key-application-guide.md`](handouts/05-api-key-application-guide.md)（課前已申請）及 [`handouts/01-cursor-setup-guide.md`](handouts/01-cursor-setup-guide.md)。**實操：** 填入 **Gemini API Key** 同 **DeepSeek API Key**（DeepSeek 經 OpenAI 兼容接口，Base URL = `https://api.deepseek.com`）。**測試：** Agent 分別用 `deepseek-chat` 同 `gemini-2.0-flash` 打廣東話測試句。 |
+<br>駁通私家水喉 | **環境配置** | **對照筆記：** 開 [`handouts/05-api-key-application-guide.md`](handouts/05-api-key-application-guide.md)（課前已申請）及 [`handouts/01-cursor-setup-guide.md`](handouts/01-cursor-setup-guide.md)。**實操：** 填入 **Gemini API Key** 同 **DeepSeek API Key**（DeepSeek 經 OpenAI 兼容接口，Base URL = `https://api.deepseek.com`）。**測試：** Agent 分別用 `deepseek-v4-flash` 同 `gemini-2.5-flash` 打廣東話測試句。 |
 | 20-40 min<br>
 
 <br>(20") | 活動 1：<br>
@@ -63,6 +63,7 @@
 | 課後 FAQ 與香港自救 | [`handouts/03-faq-hk-guide.md`](handouts/03-faq-hk-guide.md) |
 | Filesystem MCP 試玩 | [`handouts/04-filesystem-mcp-guide.md`](handouts/04-filesystem-mcp-guide.md) |
 | Google Drive MCP 設定 | [`handouts/06-google-drive-mcp-setup.md`](handouts/06-google-drive-mcp-setup.md) |
+| 靜態網站發佈（通用版） | [`handouts/07-static-site-publish.md`](handouts/07-static-site-publish.md) |
 
 ---
 
@@ -78,6 +79,7 @@
 | 活動一：逐字稿 + 範本 + SKILL | [`activity-1-minutes/`](activity-1-minutes/) |
 | 活動二：Google Drive 雲端整理 | [`activity-2-gdrive/`](activity-2-gdrive/) |
 | 活動三：MARP 簡報模板 | [`activity-3-marp/`](activity-3-marp/) |
+| 活動四：靜態網站（HTML/CSS/JS） | [`activity-4-web/`](activity-4-web/) |
 | API Key 範本（講者填寫） | [`config/.env.example`](config/.env.example) |
 
 ### 講者課前必做
@@ -89,3 +91,14 @@
 3. 預跑 [`trainer/demo-script.md`](trainer/demo-script.md) 全流程
 4. 派發課前電郵（見 checklist 範本）
 
+
+
+---
+
+## 🧩 延伸活動（課後或加堂）
+
+**活動四：生成 HTML+CSS+JS（教學用靜態網站）**
+
+- **目標**：用 Cursor Agent 生成一個可直接上線嘅靜態小工具（無需 build）
+- **素材**：`activity-4-web/`（starter + prompts）
+- **發佈**：先跟通用版 `handouts/07-static-site-publish.md`；待你提供 webhost，我再客製成「逐步截圖版」

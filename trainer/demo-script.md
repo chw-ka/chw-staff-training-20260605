@@ -25,10 +25,10 @@
 > 請大家開 Cursor，Open Folder 揀今日個 project，跟住 01 設定指南填入你課前申請嘅 Key。」
 
 **動作：**
-1. 示範 Gemini Key → `gemini-2.0-flash`
-2. 示範 DeepSeek Key → Override URL `https://api.deepseek.com` → `deepseek-chat`
+1. 示範 Gemini Key → `gemini-2.5-flash`
+2. 示範 DeepSeek Key → Override URL `https://api.deepseek.com` → `deepseek-v4-flash`
 3. 全班跟做，講者巡場
-4. `Cmd+I` → 選 deepseek-chat →「你好，請用香港廣東話回覆我：連線正常嗎？」
+4. `Cmd+I` → 選 deepseek-v4-flash →「你好，請用香港廣東話回覆我：連線正常嗎？」
 
 **成功指標：** 全班收到廣東話回覆。
 

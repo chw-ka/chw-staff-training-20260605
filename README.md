@@ -21,7 +21,8 @@ chw-staff-training-20260605/
 │   ├── 03-faq-hk-guide.md        ← 課後 FAQ
 │   ├── 04-filesystem-mcp-guide.md ← Filesystem MCP 試玩
 │   ├── 05-api-key-application-guide.md ← API Key 申請（課前必做）
-│   └── 06-google-drive-mcp-setup.md ← 活動二 Google Drive MCP
+│   ├── 06-google-drive-mcp-setup.md ← 活動二 Google Drive MCP
+│   └── 07-static-site-publish.md ← 活動四發佈（通用）
 │
 ├── .cursor/
 │   └── mcp.json                  ← Filesystem MCP 設定（project 級）
@@ -53,6 +54,12 @@ chw-staff-training-20260605/
 │   ├── template-with-footer.md
 │   ├── sample-minutes-for-slides.md
 │   └── assets/README.md          ← 放置校徽 PNG
+│
+├── activity-4-web/               ← 活動四：生成 HTML+CSS+JS（webhost）
+│   ├── README.md
+│   ├── sample-prompts.md
+│   ├── starter/                 ← 直接打開 index.html
+│   └── output/                  ← 課堂生成版本
 │
 └── config/
     ├── .env.example              ← API Key + Model 選項說明（同 .env.sample）
