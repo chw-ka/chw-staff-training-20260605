@@ -1,8 +1,9 @@
-# 活動二：【雲端神蹟】Google Drive 全自動整理
+# Google Drive 整理 — 課後自學（非 90 分鐘課堂活動）
 
-> 取代本地 Watchdog。老師在 Cursor 按 **Approve**，打開 Google Drive 看檔案自己改名、開 folder、移位。
+> **課堂活動二**已改為本機文件整理：[`../activity-2-files/`](../activity-2-files/)  
+> 本資料夾 + [`../handouts/06-google-drive-mcp-setup.md`](../handouts/06-google-drive-mcp-setup.md) + [`../handouts/09-google-drive-self-study.md`](../handouts/09-google-drive-self-study.md) 供**課後自學**。
 
-## 教學目標
+## 教學目標（自學）
 
 - 理解 **MCP** 可以連接**雲端**服務（不止本機 folder）
 - 體驗「雲端自動化」：Agent 透過 Google Drive MCP 直接操作你的 Drive

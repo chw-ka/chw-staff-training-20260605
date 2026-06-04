@@ -4,23 +4,26 @@
 
 - [ ] 確認培訓場地：每個座位有電源、Wi-Fi 穩定
 - [ ] 發出課前電郵（見下方）
-- [ ] 自己完成：Gemini + DeepSeek Key、Google Drive MCP OAuth
+- [ ] 自己完成：Google Drive MCP OAuth（**課後自學用，可選**）
 - [ ] 自己 Drive 建立 `CHW_Training_垃圾崗` 並上傳 samples
-- [ ] 預跑活動二 demo（Cursor + browser 並排）
+- [ ] 預跑活動二 demo（`activity-2-files/inbox/` → `sorted/`）
 - [ ] 放入校徽：`activity-3-marp/assets/school-logo.png`
 - [ ] 預跑完整 `trainer/demo-script.md`
+- [ ] **活動一 Whisper：** `pip install -r activity-1-minutes/scripts/requirements.txt`（首次下載 large-v3 ~3 GB）
+- [ ] 預跑 Phase 1：`python activity-1-minutes/scripts/transcribe.py`（~45 秒 clip）
 
 ## 24 小時前
 
-- [ ] 統計：幾位未完成 Google OAuth / API Key
+- [ ] 統計：幾位未完成 Google OAuth
 - [ ] 準備備用：OAuth 全掛 → 本地 Watchdog
-- [ ] 列印/PDF：`handouts/` 05、06、01、02、03
+- [ ] 準備 **Demo Login** 帳密（有效期至 **2026年7月3日**；課堂派發，勿 commit）
+- [ ] 列印/PDF：`handouts/` **08**、02、03；（06、09 課後自學）
 
 ## 當日（開課前 30 分鐘）
 
 - [ ] 講者：Cursor MCP → `google-drive` Connected
 - [ ] 講者：browser 開 drive.google.com → 垃圾崗
-- [ ] 測試 Wi-Fi（Google API + DeepSeek）
+- [ ] 測試 Wi-Fi（Google Drive MCP）
 - [ ] 計時器 90 分鐘
 
 ## 當日（開課前 5 分鐘）
@@ -32,22 +35,18 @@
 
 ## 課前電郵範本
 
-**主旨：** 【6月5日】Cursor 培訓 — 課前準備（API Key + Google Drive）
+**主旨：** 【6月5日】Cursor 培訓 — 課前準備（Google Drive MCP）
 
 各位同事，
 
 90 分鐘 Cursor 培訓，請課前完成：
 
-### 必做（約 30–40 分鐘）
+### 必做（約 20–30 分鐘）
 
 1. **Cursor**：https://cursor.com
-2. **API Key**（Gemini + DeepSeek）：[`05-api-key-application-guide.md`](../handouts/05-api-key-application-guide.md)
-3. **Google Drive MCP**（活動二【雲端神蹟】）：[`06-google-drive-mcp-setup.md`](../handouts/06-google-drive-mcp-setup.md)
-   - 完成 OAuth 後，在 Drive 建立 folder **CHW_Training_垃圾崗**
-   - 上傳 project 內 `activity-2-gdrive/samples/` 4 個檔案
-4. **下載培訓 project**：[連結]
+2. **下載培訓 project**：[連結]
 
-課堂請**並排開 Cursor 與 Google Drive 網頁**。
+課堂 Agent Model 用 **Auto**。Google Drive 整理課後見 [`09-google-drive-self-study.md`](../handouts/09-google-drive-self-study.md)。
 
 如有問題，聯絡 [你的名字]。
 

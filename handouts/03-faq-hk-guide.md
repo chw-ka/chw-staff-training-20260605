@@ -1,4 +1,7 @@
-# 課後 FAQ — Gemini / DeepSeek 使用指南
+# 課後 FAQ — Gemini / DeepSeek 使用指南（課後可選）
+
+> **課堂唔使做以下設定。** Agent 用 **Auto** 即可。  
+> 本 FAQ 供離開 Demo 帳號後、自備 API Key 時參考。
 
 ---
 

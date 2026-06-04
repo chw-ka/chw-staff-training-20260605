@@ -1,7 +1,8 @@
-# API Key 申請指南 — Gemini + DeepSeek
+# API Key 申請指南 — Gemini + DeepSeek（課後可選）
 
-> **課前必做**（建議培訓前 3–7 天完成）  
-> 本課程**不使用 OpenAI API**。我們只用 **Google Gemini** 與 **DeepSeek** 兩個平台。
+> **課堂唔使做。** 培訓當日 Agent 用 **Auto**（Demo Login 或 Cursor 訂閱）即可。  
+> 本指南供**課後**離開 Demo 帳號、或想用自己 Key 慳用量時參考。  
+> 本課程**不使用 OpenAI API**。
 
 ---
 
@@ -103,7 +104,7 @@ A：用個人 Gmail 申請，或向 IT 申請開通；課堂可暫用 DeepSeek �
 A：香港一般**不必 VPN**，但校園防火牆可能封鎖；課前在家測試一次。
 
 **Q：我只申請到 Gemini，夠不夠？**  
-A：夠完成三個活動。活動二若 Drive MCP 未設定，講者會用備用方案或協助 OAuth。
+A：夠完成三個活動。Google Drive 為課後自學（見 09）。
 
 **Q：API Key 與 ChatGPT Plus 有什麼分別？**  
 A：完全不同。本課程用 **Gemini / DeepSeek 開發者 API**，按用量計費或有免費額度；不需要 ChatGPT 訂閱。
@@ -113,21 +114,22 @@ A：可以作後備，但**強烈建議每人用自己 Key**，課後繼續練�
 
 ---
 
-## 課前自測 Checklist
+## 課後自測 Checklist（可選）
 
-完成申請後，打勾：
+離開 Demo 帳號後，如需自備 Key：
 
 - [ ] 已取得 Gemini API Key（`AIzaSy...`）
 - [ ] 已取得 DeepSeek API Key（`sk-...`）
-- [ ] DeepSeek 帳戶已充值
-- [ ] 已跟 [`06-google-drive-mcp-setup.md`](06-google-drive-mcp-setup.md) 完成 OAuth + 上傳 samples 到 `CHW_Training_垃圾崗`
-- [ ] 已安裝 Cursor：https://cursor.com
-- [ ] 已下載培訓 project
-- [ ] 已跟 [`01-cursor-setup-guide.md`](01-cursor-setup-guide.md) 完成設定
-- [ ] Agent 測試句收到繁體中文書面語回覆
+- [ ] DeepSeek 帳戶已充值（如用 DeepSeek）
+- [ ] 已跟 [`03-faq-hk-guide.md`](03-faq-hk-guide.md) 填入 Cursor Settings
+
+**課堂必做：**
+
+- [ ] 已跟 [`08-appendix-安裝清單.md`](08-appendix-安裝清單.md) 完成 Demo Login；Agent 用 **Auto**
 
 ---
 
 ## 下一步
 
-→ 跟 [`01-cursor-setup-guide.md`](01-cursor-setup-guide.md) 將 Key 填入 Cursor
+→ 課堂：跟 [`08-appendix-安裝清單.md`](08-appendix-安裝清單.md) 開始  
+→ 課後填 Key：見 [`03-faq-hk-guide.md`](03-faq-hk-guide.md)

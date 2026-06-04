@@ -1,0 +1,14 @@
+---
+description: 本活動素材的語言、語氣與交付標準
+globs: handouts/**,*.md,output/**
+alwaysApply: false
+---
+
+# Training Asset Standards
+
+When creating or editing materials in this folder:
+
+1. **Language:** 繁體中文書面語（面向學員的說明、講義）；正式會議紀錄／表格亦用書面語
+2. **Demos:** Prefer error-free, copy-paste-ready prompts and sample transcripts
+3. **Minutes format:** Use columns 議項 / 內容摘要 / 跟進人員·部門 / 限期 when showing school-format output
+4. **Metaphors over jargon:** Explain `@` 引用 as giving the AI intern the right filing cabinet — not vector databases

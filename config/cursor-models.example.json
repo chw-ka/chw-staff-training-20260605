@@ -6,7 +6,7 @@
       {
         "name": "gemini-2.0-flash",
         "enabled": true,
-        "useFor": ["活動一（備用）", "活動三（主力 + 插圖）"]
+        "useFor": ["活動三（主力 + 插圖）"]
       }
     ]
   },
@@ -19,7 +19,7 @@
       {
         "name": "deepseek-chat",
         "enabled": true,
-        "useFor": ["活動一（主力）", "活動二（主力）"]
+        "useFor": ["活動一 Phase 1 寫 code", "活動一 Phase 2–3", "活動二（主力）"]
       }
     ]
   }

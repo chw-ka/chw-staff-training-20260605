@@ -1,136 +1,159 @@
 # Prompt 懶人包 — 三個活動實操指令
 
 > 直接複製貼上到 Agent 視窗（`Cmd/Ctrl + I`）。  
-> 記得用 `@` 引用相關檔案，效果更準確。
-
-### 用哪個 Model？
-
-| 活動 | Agent 右上角選 |
-|------|----------------|
-| 活動一、二 | **deepseek-v4-flash** |
-| 活動三 | **gemini-2.5-flash** |
+> **Model 用 Auto** 即可。  
+> 想 Agent 讀某份檔，輸入 **`@`** 再揀檔名（例如 `@sample-meeting-transcript.txt`）。
 
 ---
 
-## 活動一：錄音變 Minutes（20–40 min）
+## 活動一：錄音 → 會議紀錄（20–40 min）
 
-### 基本版 Prompt
+> **目標：** 學懂完整流程 — 錄音 → 文字 → 加議程同範本 → 出紀錄。  
+> 詳解：[`activity-1-minutes/README.md`](../activity-1-minutes/README.md)
+
+### 三個步驟
 
 ```
-你是迦密聖道中學（CHW）的行政助理。請讀取 @activity-1-minutes/sample-meeting-transcript.txt，
-依照 @activity-1-minutes/minutes-template.md 的格式，用繁體中文書面語撰寫完整會議紀錄。
-
-要求：
-1. 列出所有出席者與缺席者
-2. 每個議程項要有：討論摘要、決議、跟進負責人與截止日期
-3. 用 Word 友好的 Markdown 格式輸出
-4. 儲存為 activity-1-minutes/output/meeting-minutes-draft.md
+第一步  錄音 → 文字        （課堂用短錄音示範）
+第二步  逐字稿 + 議程 + 通用範本 → 紀錄（.md 草稿 + .docx）
+第三步  逐字稿 + 議程 + 上學年格式 → 今年紀錄（.md 草稿 + .docx，可選）
 ```
 
-### 進階版（引用 SKILL）
+> **交付格式：** 老師日常用 **Word（.docx）** 開檔；**排版文字（.md）** 留喺 Cursor 內改稿同接觸新格式，唔使驚。
+
+---
+
+### 第一步 — 錄音轉文字
+
+```
+我有一份會議錄音，想轉做文字。
+
+請讀 @activity-1-minutes/samples/demo-short-clip.m4a，
+幫我寫好轉文字嘅程式，跑完之後將結果儲存到
+activity-1-minutes/output/transcript-from-audio.txt。
+
+每一步請等我批准先再做。如果部機缺軟件，請話我知點搞。
+```
+
+**對照結果：** `activity-1-minutes/samples/demo-short-clip-expected-transcript.txt`
+
+> 💡 若轉寫太慢，可直接用 `@activity-1-minutes/sample-meeting-transcript.txt` 跳去第二步。
+
+---
+
+### 第二步 — 寫會議紀錄（通用範本）
+
+> 用 `minutes-template.md` 學基本 workflow。
 
 ```
 @.cursor/skills/meeting-minutes/SKILL.md
 
-請按照 SKILL 的流程，處理 @activity-1-minutes/sample-meeting-transcript.txt，
-輸出會議紀錄並儲存。
+請跟 SKILL 嘅格式，幫我寫會議紀錄：
+
+- 會議內容：@activity-1-minutes/sample-meeting-transcript.txt
+- 議程：@activity-1-minutes/議程_視藝科組會_20260528.docx
+- 格式範本：@activity-1-minutes/minutes-template.md
+
+用繁體中文書面語。
+
+請先寫排版文字：activity-1-minutes/output/meeting-minutes-draft.md
+再轉成 Word：activity-1-minutes/output/會議紀錄_草稿.docx（老師用 Word 開呢份）
+
+決議、跟進人、截止日期唔可以漏。我會覆核 .docx 後才作正式版本。
 ```
 
-### 老師可自訂的變體
-
-- 將 `sample-meeting-transcript.txt` 換成你自己的逐字稿
-- 在 Prompt 加：「我們科組叫 XXX，校長叫 YYY」
+**對照：** `.md` 見 `expected-output-sample.md`；正式檔為 `.docx`
 
 ---
 
-## 活動二：【雲端神蹟】Google Drive 整理（40–65 min）
+### 第三步 — 用上學年格式寫今年紀錄（可選）
 
-> 並排開 **Cursor** + **drive.google.com**。Model 選 **deepseek-v4-flash**。  
-> 課前完成 [`06-google-drive-mcp-setup.md`](06-google-drive-mcp-setup.md)。
+> 科組日常做法：**上學年紀錄**做格式參考（版面、欄位、語氣），內容來自**今年議程**同**今年逐字稿**。  
+> **唔係**把兩份紀錄合併。
+
+```
+@.cursor/skills/meeting-minutes/SKILL.md
+
+請幫我寫今年嘅會議紀錄：
+
+- 會議內容（逐字稿）：@activity-1-minutes/sample-meeting-transcript.txt
+- 議程：@activity-1-minutes/議程_視藝科組會_20260528.docx
+- 格式參考（跟足上學年紀錄嘅版面同欄位）：@activity-1-minutes/會議紀錄_視藝科組_20250522_上學年.docx
+
+內容只可以來自今年逐字稿同議程，唔好抄上學年嘅舊內容。
+用繁體中文書面語。
+
+請先寫排版文字：activity-1-minutes/output/meeting-minutes-final.md
+再轉成 Word：activity-1-minutes/output/會議紀錄_視藝科組_20260528.docx（跟足上學年紀錄版面）
+
+我會覆核 .docx 後才作正式版本。
+```
+
+**對照：** `.md` 見 `expected-output-sample.md`；正式檔為 `.docx`
+
+---
+
+## 活動二：本機文件整理（40–60 min）
+
+> Open Folder → **`activity-2-files`**（內附 SKILL、RULES）。  
+> `inbox/` 約 100 個示範下載檔；**按內容分類**，唔按副檔名。
+
+### 三階段（詳見 [`activity-2-files/sample-prompts.md`](../activity-2-files/sample-prompts.md)）
+
+**A 傾談（唔搬檔）**
+```
+@.cursor/skills/file-organizer/SKILL.md
+
+我個下載 folder 好亂。我係中學老師，有教學、行政、eLearning、ICT、STEAM。
+請同我傾想點分類、舊檔點處理；inbox/ 約 100 個檔。
+呢個階段只傾，唔好搬任何檔。
+```
+
+**B 定規則**
+```
+根據剛才傾談，以 @activity-2-files/my_organization_profile.example.md 為底寫 my_organization_profile.md，
+確認 @activity-2-files/folder_structure.md，列出規則等我確認。
+```
+
+**C 一句執行（確認後貼）**
+```
+@.cursor/skills/file-organizer/SKILL.md
+@activity-2-files/my_organization_profile.md
+@activity-2-files/folder_structure.md
+
+請讀 @activity-2-files/inbox/ 每個檔內容，分類入 sorted/<類別>/<學年>/ 或 <類別>/跨學年/（跨學年檔唔好硬塞單一學年）。逐步批准。完成後俾摘要表。
+```
+（未建立 profile 時將 `my_organization_profile.md` 改為 `my_organization_profile.example.md`）
+
+**對照：** `sorted/教學/2025-2026/`、`sorted/行政/跨學年/` 等（唔係 01_PDF）
+
+> **Google Drive 課後自學：** [`09-google-drive-self-study.md`](09-google-drive-self-study.md)
+
+---
+
+## 活動三：會議紀錄 → 早會簡報（60–85 min）
 
 ### 主推 Prompt
 
 ```
-我 Google Drive 有個 folder 叫「CHW_Training_垃圾崗」，裡面是學生交的功課但檔名很亂。
+校長要我針對今日科組會議，準備聽日早會簡報。
 
-請用 Google Drive MCP：
-1. 讀取 @activity-2-gdrive/rename_rules.example.json 的規則
-2. listFolder 列出「CHW_Training_垃圾崗」裡面所有檔案
-3. 建立「CHW_Training_已整理/視覺藝術/」folder（若尚未有）
-4. 逐個檔案 renameItem 同 moveItem，改成【功課】_學生名_視覺藝術.副檔名
-5. 每步等我 Approve — 我會在 browser 看 Google Drive
+請讀：
+- @activity-1-minutes/output/會議紀錄_視藝科組_20260528.docx（或第二步嘅 會議紀錄_草稿.docx）
+- @activity-3-marp/template-with-footer.md（簡報格式同校徽）
+- @activity-3-marp/marp-syntax-reference.md（排版參考）
+
+幫我寫 6–8 頁簡報，包括：封面、會議概要、三個決議重點、跟進時間表、總結。
+圖片位置可以先留空，我之後再補。
+儲存為 activity-3-marp/output/morning-briefing.md
 ```
 
-### 書面語簡化版
+### 精簡版（時間唔夠）
 
 ```
-幫我整理 Google Drive「CHW_Training_垃圾崗」的亂碼功課，
-跟 @activity-2-gdrive/rename_rules.example.json 改名搬去「CHW_Training_已整理/視覺藝術/」。
-用 Google Drive MCP，逐 step 等我 Approve。
-```
-
-### 課堂操作
-
-1. 開 Google Drive → 確認 `CHW_Training_垃圾崗` 有 4 個亂碼檔
-2. Agent 貼 Prompt → 逐次按 **Approve**
-3. 看 browser：folder 自動出現、檔名自動改、檔案自動移位
-
-### OAuth 測試（設定後先做）
-
-```
-用 Google Drive MCP listFolder 列出「CHW_Training_垃圾崗」有哪些檔案。
-```
-
----
-
-## 活動三：MARP 直出 PPT（65–85 min）
-
-### 完整 Prompt
-
-```
-校長要求我針對今日科組會議的決議，準備明日早會簡報。
-
-請：
-1. 讀取 @activity-1-minutes/expected-output-sample.md（或你活動一的 output）
-2. 參考 @activity-3-marp/template-with-footer.md 的 MARP 格式與校徽 footer
-3. 參考 @activity-3-marp/marp-syntax-reference.md 的語法
-4. 製作 6–8 頁簡報，包括：封面、會議概要、3 個決議重點、跟進時間表、總結
-5. 每頁用 bg left 或 bg right 分欄排版（一邊文字、一邊圖片 placeholder）
-6. 如有 Gemini API，為每個決議生成一張教育主題插圖，存入 activity-3-marp/assets/
-7. 輸出為 activity-3-marp/output/morning-briefing.md
-```
-
-### 只學 MARP 語法（無 API 圖片）
-
-```
-請根據 @activity-3-marp/sample-minutes-for-slides.md 的內容，
-用 @activity-3-marp/template-with-footer.md 的 footer 與 CSS，
-寫一份 5 頁 MARP 簡報。圖片位置用 placeholder URL 即可。
-```
-
-### MARP 語法速記
-
-```markdown
----
-marp: true
-theme: default
----
-
-# 標題頁
-副標題
-
----
-
-<!-- _class: lead -->
-# 第二頁
-
----
-
-![bg left:40%](assets/school-logo.png)
-
-# 分欄排版
-
-右邊文字，左邊 40% 圖片
+請根據 @activity-3-marp/sample-minutes-for-slides.md，
+用 @activity-3-marp/template-with-footer.md 嘅格式，
+幫我寫 5 頁早會簡報。圖片位置留空就得。
 ```
 
 ---
@@ -139,47 +162,38 @@ theme: default
 
 | 技巧 | 用法 |
 |------|------|
-| `@檔案` | 讓 Agent 讀取 project 內特定檔案 |
-| 「請用繁體中文書面語」 | 控制輸出語言 |
-| 「儲存為 xxx.md」 | 指定輸出位置 |
-| 「解釋你如何操作」 | 教學時讓全班看 Agent 思路 |
-| Allow / Run | Agent 改檔或跑 terminal 前會問你批准 — 課堂請按 Allow |
+| `@` 揀檔 | 話 Agent 讀邊份稿，唔使成段複製貼上 |
+| 「用繁體中文書面語」 | 控制輸出語言 |
+| 「儲存為 xxx」 | 指定輸出位置 |
+| **.md 再轉 .docx** | 活動一：先排版文字改稿，再出 Word 正式檔 |
+| **Allow / 批准** | Agent 改檔或執行程式前會問你 — 課堂請按批准 |
 
 ---
 
-## 課後練習建議
+## 課後練習
 
-1. 用自己科組會議逐字稿跑活動一
-2. 改 `rename_rules.example.json` 配合你的檔名規則
-3. 用 MARP 做下週早會簡報
+1. 用自己科組會議錄音同逐字稿，重做活動一
+2. 用 `activity-2-files/` 三階段整理練習（先傾、定規則、執行）
+3. 用活動三格式，做下週早會簡報
+4. （可選）Google Drive 自學：[`09-google-drive-self-study.md`](09-google-drive-self-study.md)
 
-詳見 `handouts/03-faq-hk-guide.md`。
-
+詳見 [`03-faq-hk-guide.md`](03-faq-hk-guide.md)。
 
 ---
 
-## 活動四：生成 HTML + CSS + JS（延伸活動）
-
-> Model：建議 **deepseek-v4-flash**。
-> 生成靜態檔（無需 build），方便之後放入 NAS `_web` 經 teacher.chw.edu.hk 發佈。
-
-### 主推 Prompt
+## 活動四：功課命名小工具（延伸，可選）
 
 ```
-請幫我用純 HTML + CSS + Vanilla JS 寫一個教學用小網站，功能是「功課命名器」。
+請幫我寫一個簡單網頁「功課命名器」：
 
-要求：
-1. 輸出到 activity-4-web/output/，包含：index.html、styles.css、app.js
-2. UI 要現代、清晰、mobile responsive（兩欄 → 手機一欄）
-3. 表單欄位：學生姓名、科目、原檔名、前綴（預設【功課】）
-4. 按「生成」後顯示建議檔名：{prefix}_{student}_{subject}.{ext}
-5. 提供「複製到剪貼簿」按鈕（成功/失敗提示）
-6. 所有文字用香港繁中書面語
-7. 最後請提供 5 條老師可以改的延伸功能點
+老師輸入學生姓名、科目、原檔名，
+按掣後顯示建議檔名：【功課】_學生名_科目.副檔名，
+再加一個「複製」掣方便貼去檔案總管。
 
-提示：我們之後會將 output 裡面的檔案複製到 NAS 的 _web folder，經 teacher.chw.edu.hk 發佈。
+全部用香港繁中，介面要清晰易用。
+儲存到 activity-4-web/output/ 資料夾。
+
+完成後話我知點樣打開預覽。
 ```
 
-### 發佈提示
-
-見 `handouts/07-static-site-publish.md`。
+發佈方法見 [`07-static-site-publish.md`](07-static-site-publish.md)。

@@ -1,4 +1,5 @@
 【視覺藝術科組會議 — 語音轉文字逐字稿】
+> **Workflow 位置：** Phase 2–3 用此檔（Phase 1 短 clip 轉寫見 `samples/demo-short-clip-expected-transcript.txt`）
 日期：2026年5月28日（星期三）
 時間：16:00–17:05
 地點：視藝室

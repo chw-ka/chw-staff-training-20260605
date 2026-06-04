@@ -1,0 +1,17 @@
+---
+description: 活動二文件整理 — 內容分類、先傾後做
+globs: inbox/**,sorted/**,my_organization_profile*.md,folder_structure.md
+alwaysApply: false
+---
+
+# File Organizer Rules
+
+When organizing `activity-2-files/inbox/`:
+
+1. **Never classify by file extension only**
+2. **Read file content** before choosing a folder
+3. Follow `my_organization_profile.md` (or `.example`)
+4. If rules unclear, run **階段 A 傾談** first — do not mass-move files
+5. Uncertain files → `sorted/待確認/…`
+6. Do not delete unless user explicitly approves
+7. **Paths:** single-year → `sorted/<category>/<school-year>/`；cross-year → `sorted/<category>/跨學年/`；category root only if profile allows and no subfolder fits

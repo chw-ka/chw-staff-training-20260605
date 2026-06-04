@@ -16,13 +16,15 @@ chw-staff-training-20260605/
 ├── README.md                     ← 你正在看的這份文件
 │
 ├── handouts/                     ← 學員講義（課堂派發 / 投影用）
-│   ├── 01-cursor-setup-guide.md  ← Gemini + DeepSeek 填入 Cursor
+│   ├── 01-cursor-setup-guide.md  ← Cursor 快速開始（Auto，唔使填 Key）
 │   ├── 02-prompt-cheatsheet.md   ← 三個活動的 Prompt 懶人包
 │   ├── 03-faq-hk-guide.md        ← 課後 FAQ
 │   ├── 04-filesystem-mcp-guide.md ← Filesystem MCP 試玩
-│   ├── 05-api-key-application-guide.md ← API Key 申請（課前必做）
-│   ├── 06-google-drive-mcp-setup.md ← 活動二 Google Drive MCP
-│   └── 07-static-site-publish.md ← 活動四發佈（teacher.chw.edu.hk）
+│   ├── 05-api-key-application-guide.md ← API Key 申請（課後可選）
+│   ├── 06-google-drive-mcp-setup.md ← Drive MCP（課後自學）
+│   ├── 09-google-drive-self-study.md ← 課後自學指引
+│   ├── 07-static-site-publish.md ← 活動四發佈（teacher.chw.edu.hk）
+│   └── 08-appendix-安裝清單.md   ← 附錄：Cursor / Demo Login / Python
 │
 ├── .cursor/
 │   ├── rules/                    ← Project AI 規則（non-dev 語氣等）
@@ -39,21 +41,30 @@ chw-staff-training-20260605/
 │   ├── demo-chaotic-transcript/  ← 混亂逐字稿 → Minutes
 │   └── demo-student-compositions/← @Folder 評作文 demo
 │
-├── activity-1-minutes/           ← 活動一：錄音變 Minutes
+├── activity-1-minutes/           ← 活動一：Workflow 錄音 → Minutes
+│   ├── README.md                 ← Workflow 說明 + 三 Phase
 │   ├── sample-meeting-transcript.txt
+│   ├── 議程_視藝科組會_20260528.docx  ← 議程（Word）
+│   ├── 會議紀錄_視藝科組_20250522_上學年.docx ← 上學年紀錄（第三步格式參考）
 │   ├── minutes-template.md
 │   ├── expected-output-sample.md
+│   ├── samples/demo-short-clip.m4a  ← Phase 1 短錄音 (~45s)
+│   ├── scripts/transcribe.py     ← Whisper 轉寫
 │   └── .cursor/skills/meeting-minutes/SKILL.md
 │
-├── activity-2-gdrive/            ← 活動二：【雲端神蹟】Google Drive 整理
+├── activity-2-files/             ← 活動二：先傾後做、讀內容分類（inbox ~100 檔）
+│   ├── inbox/
+│   ├── sorted/（教學、行政、ICT…）
+│   ├── .cursor/skills/file-organizer/
+│   ├── my_organization_profile.example.md
+│   └── sample-prompts.md
+│
+├── activity-2-gdrive/            ← Google Drive 整理（課後自學）
 │   ├── README.md
 │   ├── sample-prompts.md
-│   ├── rename_rules.example.json
-│   ├── demo-setup.md
-│   ├── setup-auth.sh
-│   └── samples/                  ← 上傳到 Google Drive 垃圾崗
+│   └── samples/
 │
-├── activity-2-watchdog/          ← 備用（OAuth 失敗時本地 demo）
+├── activity-2-watchdog/          ← 舊備用（可忽略）
 │
 ├── activity-3-marp/              ← 活動三：MARP 直出 PPT
 │   ├── marp-syntax-reference.md
@@ -81,14 +92,14 @@ chw-staff-training-20260605/
 ### 課前 48 小時
 
 1. 閱讀 `trainer/pre-class-checklist.md`，逐項打勾。
-2. 確認學員已收到 [`handouts/05-api-key-application-guide.md`](handouts/05-api-key-application-guide.md)（課前 3–7 天）。
-3. 自己申請 Gemini + DeepSeek Key，填入 `config/.env` 作 demo。
+2. 確認學員已完成 Cursor 安裝及 Demo Login（Google Drive OAuth **唔使**，課後見 09）
+3. 自己申請 Gemini + DeepSeek Key，填入 `config/.env` 作 demo（**可選**；課堂學員用 Auto）。
 4. 將校徽 PNG 放入 `activity-3-marp/assets/school-logo.png`。
-5. 在講者電腦預跑一次 `trainer/demo-script.md` 全流程。
+5. 在講者電腦預跑一次 `trainer/demo-script.md` 全流程（**含活動一 Whisper Phase 1**）。
 
 ### 課堂當日
 
-1. 投影 `handouts/01-cursor-setup-guide.md`，帶全班完成 Gemini + DeepSeek 設定（10 分鐘）。
+1. 投影 `handouts/08-appendix-安裝清單.md`，學員跟附錄安裝 Cursor、Open Folder；Agent 用 **Auto**（10 分鐘）。
 2. 按 `LessonPlan.md` 時間表，依序進行三個活動。
 3. 派發 `handouts/02-prompt-cheatsheet.md` 與 `handouts/03-faq-hk-guide.md`。
 4. 隨時參考 `trainer/troubleshooting.md`。
@@ -104,11 +115,11 @@ chw-staff-training-20260605/
 ## 學員快速開始
 
 1. 安裝 [Cursor](https://cursor.com)（選 Download for your OS）。
-2. 跟 [`handouts/05-api-key-application-guide.md`](handouts/05-api-key-application-guide.md) 申請 **Gemini** + **DeepSeek** Key。
-3. 用 Cursor 開啟此 project folder。
-4. 跟 [`handouts/01-cursor-setup-guide.md`](handouts/01-cursor-setup-guide.md) 設定 API。
-5. 在 Agent 視窗（`Cmd/Ctrl + I`）貼上 `handouts/02-prompt-cheatsheet.md` 的 Prompt 開始實操。
+2. 用 Cursor 開啟此 project folder。
+3. 跟 [`handouts/08-appendix-安裝清單.md`](handouts/08-appendix-安裝清單.md) 完成 Demo Login；Agent Model 選 **Auto**。
+4. 在 Agent 視窗（`Cmd/Ctrl + I`）貼上 `handouts/02-prompt-cheatsheet.md` 的 Prompt 開始實操。
 
+> 課後如需自備 API Key，見 [`handouts/05-api-key-application-guide.md`](handouts/05-api-key-application-guide.md)。
 ---
 
 ## 所需軟件（學員電腦）
@@ -116,8 +127,9 @@ chw-staff-training-20260605/
 | 軟件 | 用途 | 安裝方式 |
 |------|------|----------|
 | Cursor | 主工具 | cursor.com |
-| Google 帳號 | 活動二 Drive MCP | 課前 OAuth 設定 |
-| Python 3.10+（可選） | 備用 Watchdog demo | 見 activity-2-watchdog |
+| Google 帳號 | 課後 Drive 自學（可選） | 見 `09-google-drive-self-study.md` |
+| Python 3.10+ | 活動一 Whisper 轉寫；備用 Watchdog | 課堂 Phase 1 需用；見 `activity-1-minutes/scripts/` |
+| ffmpeg | 活動一讀取 .m4a | 與 Whisper 一併使用 |
 | VS Code Marp 擴充（可選） | 預覽 MARP 簡報 | Cursor 內裝 Marp for VS Code |
 
 ---

@@ -1,4 +1,7 @@
-# Google Drive MCP 設定指南 — 活動二【雲端神蹟】
+# Google Drive MCP 設定指南 — 課後自學用
+
+> **90 分鐘課堂唔做此設定。** 課堂活動二為本機文件整理（[`activity-2-files/`](../activity-2-files/)）。  
+> 本指南供課後跟 [`09-google-drive-self-study.md`](09-google-drive-self-study.md) 自學。
 
 > 課前必做（約 20–30 分鐘，只需做一次）。完成後 Agent 可直接整理你 Google Drive 裡面的檔案。
 

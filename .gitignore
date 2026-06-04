@@ -1,3 +1,4 @@
+.env
 config/.env
 config/gcp-oauth.keys.json
 .DS_Store

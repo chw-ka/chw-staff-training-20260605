@@ -1,7 +1,8 @@
 # Filesystem MCP 試玩指南
 
 > 本 project 已設定 `@modelcontextprotocol/server-filesystem` 與 **Google Drive MCP**。  
-> **活動二主線**用 Google Drive — 見 [`06-google-drive-mcp-setup.md`](06-google-drive-mcp-setup.md)
+> **課堂活動二**用本機整理 — 見 [`activity-2-files/`](../activity-2-files/)。  
+> 本指南供課餘試玩 Filesystem MCP；Google Drive 見 [`09-google-drive-self-study.md`](09-google-drive-self-study.md)。
 
 ---
 
@@ -112,7 +113,7 @@ A：檢查 Node.js 是否已安裝（`npx --version`）；Reload Window；看 MC
 A：必須用 project 內的相對或絕對路徑；Windows 同事要改 `.cursor/mcp.json` 裡面的 path。
 
 **Q：與 Activity 2 有什麼分別？**  
-A：活動二用 **Google Drive MCP**（雲端，browser 即時看）。Filesystem MCP 只動本機 project，適合課餘試玩。
+A：課堂活動二用 **Agent 整理 project 內 `activity-2-files/`**（唔使 MCP）。Filesystem MCP 適合課餘試玩；Google Drive 見 [`09-google-drive-self-study.md`](09-google-drive-self-study.md)。
 
 ---
 

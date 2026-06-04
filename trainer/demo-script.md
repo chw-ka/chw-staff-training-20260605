@@ -18,67 +18,77 @@
 
 ## 環境設定（00:10–00:20）
 
-**[投影 handouts/01-cursor-setup-guide.md]**
+**[投影 handouts/08-appendix-安裝清單.md]**
 
 **話術：**
-> 「首先『駁通水喉』。我們不用 OpenAI，只用 **Gemini** 與 **DeepSeek** 兩個 API。
-> 請大家開 Cursor，Open Folder 選今日這個 project，跟著 01 設定指南填入你課前申請的 Key。」
+> 「安裝 Cursor、Demo Login、Python 跟 **附錄** 做 — 我唔逐 step 讀。Demo 登入用到 **7月3日**，帳密我而家派。
+> Python 大部分唔使自己裝：跟活動一叫 Agent 幫你，得就唔使理附錄 C。
+> Agent Model 揀 **Auto** 就得，唔使填 API Key。」
 
 **動作：**
-1. 示範 Gemini Key → `gemini-2.5-flash`
-2. 示範 DeepSeek Key → Override URL `https://api.deepseek.com` → `deepseek-v4-flash`
-3. 全班跟做，講者巡場
-4. `Cmd+I` → 選 deepseek-v4-flash →「你好，請用繁體中文書面語回覆我：連線正常嗎？」
+1. 派 Demo Login（紙／投影片）
+2. 學員跟附錄 A–B 自做；Open Folder
+3. 講者巡場；已完成者預習 02 handout
+4. 快速測試：Agent 問一句「請用繁體中文書面語回覆：連線正常嗎？」
 
-**成功指標：** 全班收到繁體中文書面語回覆。
+**成功指標：** 大部分學員 Agent 收到繁體中文書面語回覆。
 
-**若有人 lag：** 已完成的同事先閱讀 `handouts/02-prompt-cheatsheet.md`。
+**若有人 lag：** 已完成者先閱讀 `handouts/02-prompt-cheatsheet.md`。
 
 ---
 
-## 活動一 Demo（00:20–00:40）
+## 活動一 Demo（00:20–00:40）— Workflow 三階段
 
-**[開啟 activity-1-minutes/]**
+**[開啟 activity-1-minutes/，投影 README workflow 圖]**
 
 **話術：**
-> 「大家有沒有試過一個鐘科組會，錄音轉文字很長，網頁貼不上？
-> API 就是打破這個限制。我們還會用 SKILL — 把寫 minutes 的規則預先寫好，每次都用同一標準。」
+> 「活動一學 **Workflow**，唔係淨係出 minutes。
+> 真實流程：錄音 → 文字 → Agenda + 範本 → 紀錄；可加埋上年纪錄。
+> 一個鐘錄音用最準 model 轉文字要 **一兩個鐘**，網頁又 upload 唔到 — 所以 Cursor 幫你 **寫 code** 本機跑。
+> 今日 Phase 1 用 **45 秒** clip 示範；Phase 2–3 用視藝科完整稿。」
 
-**動作：**
-1. 簡介 `sample-meeting-transcript.txt`（1 min）
-2. 打開 Agent，貼上 `handouts/02-prompt-cheatsheet.md` 活動一 Prompt
-3. 或加 `@.cursor/skills/meeting-minutes/SKILL.md`
-4. Allow Agent 讀檔、寫檔
-5. 開啟 output，對照 `expected-output-sample.md`
+**Phase 1（~8 min）：**
+1. 播放 `samples/demo-short-clip.m4a`
+2. Agent 貼 `02-prompt-cheatsheet.md` **Phase 1 Prompt**（Model：**Auto**）
+3. Allow 生成 script + 跑 Whisper → `output/transcript-from-audio.txt`
+4. **Vibe Coding 話術：** 左面檔案自己郁，唔使睇 code，重 Input/Output
 
-**話術（生成後）：**
-> 「留意決議有沒有漏、日期是否正確。AI 是草稿，你是 editor。」
+**Phase 2（~8 min）：**
+1. 展示 `議程_視藝科組會_20260528.docx`、`minutes-template.md`
+2. 貼 **Phase 2 Prompt** + SKILL
+3. 對照 `expected-output-sample.md`
 
-**全班練習：** 用同一 Prompt 自己跑一遍（約 8 min）。
+**Phase 3（~4 min）：**
+1. 貼 **第三步 Prompt**，用 `@會議紀錄_視藝科組_20250522_上學年.docx` 做格式參考
+2. 對照 `expected-output-sample.md`
+
+**全班練習：** Phase 1 + 2 必做；Phase 3 時間許可再做。
+
+**詳細腳本：** [`trainer/activity-1-demo-script.md`](activity-1-demo-script.md)
+
+**Whisper 備用：** 跳過 live 轉寫，見 `troubleshooting.md`。
 
 ---
 
-## 活動二 Demo（00:40–01:05）— 【雲端神蹟】
+## 活動二 Demo（00:40–01:00）— 先傾清楚，再執行
 
-**[並排：Cursor + Chrome drive.google.com]**
+**[Open Folder `activity-2-files/`]**
 
-**話術：**
-> 「第二個痛點：Google Drive 垃圾崗。今日不寫 Python — 用 MCP 直接操作雲端。
-> 大家 Drive 開著 `CHW_Training_垃圾崗`，Cursor 貼 Prompt，每次 Approve 就回去 browser 看。」
+**話術：** 見 [`talking-points-activity2-files.md`](talking-points-activity2-files.md) 開場。
 
 **動作：**
-1. 展示垃圾崗 4 個亂碼檔
-2. 貼 `activity-2-gdrive/sample-prompts.md` 主推 Prompt
-3. 慢動作 Approve：`listFolder` → `createFolder` → `renameItem` → `moveItem`
-4. 開 `CHW_Training_已整理/視覺藝術/` 展示成果
+1. 展示 `inbox/` ~100 亂檔 + `sorted/` 目標結構（教學、行政、ICT…）
+2. 階段 A：傾談 Prompt（唔搬檔）— 全班 3 min
+3. 階段 B：定 `my_organization_profile.md` — 5 min
+4. 階段 C：一句執行 → 逐步 Approve → 睇 `sorted/` 入檔
 
-**全班練習：** 跟著 Approve 完整整理（約 8 min）
+**全班練習：** 時間唔夠可跳 A，用 `.example` 直做 C。
 
-**備用（OAuth 全掛）：** 見 `activity-2-watchdog/` + `trainer/troubleshooting.md`
+**課後：** Google Drive 見 `09-google-drive-self-study.md`
 
 ---
 
-## 活動三 Demo（01:05–01:25）
+## 活動三 Demo（01:00–01:25）
 
 **[開啟 activity-3-marp/]**
 
@@ -105,7 +115,7 @@
 **話術：**
 > 「今日三個 activity：會議 → 紀錄 → 簡報；Google Drive 垃圾崗 → 雲端自動整理。
 > 處理學生私隱時，請考慮用 Ollama 本地模型 — FAQ 有教。
-> **重要：API Key 是你自己的，課後繼續用。** DeepSeek 記得 check 餘額。詳見 handouts/03-faq-hk-guide.md。
+> **課後**如用自己 Key，詳見 handouts/03-faq-hk-guide.md 及 05 申請指南。
 > 多謝大家，祝各位成為工作流總設計師！」
 
 **動作：** 派發/分享 handouts 連結，Q&A（可 overrun 1–2 min）。
@@ -116,12 +126,14 @@
 
 | 項目 | 位置 |
 |------|------|
-| 講者 demo 用 Key | `config/.env`（勿 commit） |
+| 講者 demo 用 Key | `config/.env`（勿 commit；課堂學員用 Auto） |
 | Google OAuth | `config/gcp-oauth.keys.json` |
 | 活動二 Drive | `CHW_Training_垃圾崗` + samples/ |
-| DeepSeek Base URL | `https://api.deepseek.com` |
-| 活動一/二 Model | `deepseek-v4-flash` |
-| 活動三 Model | `gemini-2.5-flash` |
+| Agent Model | **Auto**（全課） |
+| 活動一 Whisper | `large-v3`（`scripts/transcribe.py`） |
+| 活動一短 clip | `activity-1-minutes/samples/demo-short-clip.m4a` |
+| 活動一詳細腳本 | `trainer/activity-1-demo-script.md` |
 | 校徽 | activity-3-marp/assets/school-logo.png |
 | 備用 output | activity-1-minutes/expected-output-sample.md |
-| 備用本地 demo | activity-2-watchdog/homework_watcher.py |
+| 活動二示範檔 | `activity-2-files/inbox/` |
+| 課後 Drive 自學 | `09-google-drive-self-study.md` |

@@ -22,22 +22,42 @@
 |------|----------|
 | 找不到 Agent | `Cmd + I`（Mac）或 `Ctrl + I`（Windows） |
 | 找不到 Gemini 欄位 | Settings → Models → 搜尋 Google / Gemini |
-| DeepSeek 填哪裡？ | OpenAI API Key 欄 + Override URL（見 01 設定指南） |
+| DeepSeek 填哪裡？ | 課堂唔使；課後見 [`03-faq-hk-guide.md`](../handouts/03-faq-hk-guide.md) |
 | 無 Verify 按鈕 | 更新 Cursor；手動在 Agent 試一句 |
 
 ---
 
-## 活動一：Minutes
+## 活動一：Workflow — 錄音 → Minutes
 
 | 症狀 | 解決方法 |
 |------|----------|
-| 逐字稿太長 | `@sample-meeting-transcript.txt` 讓 Agent 讀檔 |
-| 格式不對 | 貼 `minutes-template.md` 全文 |
-| 用哪個 model？ | **deepseek-v4-flash** |
+| Whisper 下載慢 / 失敗 | 課前講者預跑 `pip install -r activity-1-minutes/scripts/requirements.txt`；失敗則跳 Phase 1 |
+| `ffmpeg` not found | 安裝 ffmpeg；或跳 Phase 1 用 `sample-meeting-transcript.txt` |
+| Phase 1 超過 10 min | 展示 `demo-short-clip-expected-transcript.txt`，直入 Phase 2 |
+| 格式不對 | 確認 `@minutes-template.md` + `@議程_視藝科組會_20260528.docx` |
+| 格式唔似上學年 | 第三步確認 `@會議紀錄_視藝科組_20250522_上學年.docx` 係格式參考；對照 `expected-output-sample.md` |
+| Agent 讀唔到 .docx | 用 Word 開確認檔案存在；或 Prompt 加「請讀 docx 內容」 |
+| 冇出 .docx | Prompt 加「請將 .md 轉成 Word，存為 output/會議紀錄_草稿.docx」；需 `python-docx` |
+| 寫 code 用邊個 model？ | **Auto**（Agent） |
+| 轉寫用邊個 model？ | **Whisper large-v3**（在 transcribe.py 內，非 Agent 下拉） |
+| 1 小時錄音課堂做唔完 | 正常；課後本機跑 `samples/新錄音 2.m4a`，預留 1–2 小時 |
+
+**備用方案：** 跳過第一步，展示 `expected-output-sample.md`。
 
 ---
 
-## 活動二：Google Drive MCP【雲端神蹟】
+## 活動二：本機文件整理
+
+| 症狀 | 解決方法 |
+|------|----------|
+| 只按副檔名分類 | 提醒 Agent 讀內容；引用 `@file-organizer SKILL` |
+| 未傾就搬檔 | 先做階段 A；SKILL 禁止未確認就 mass-move |
+| 搵唔到 inbox | Open Folder 選 `activity-2-files` |
+| sorted 類別錯 | 改 `my_organization_profile.md` 再跑階段 C |
+
+---
+
+## 活動二（課後）：Google Drive MCP 自學
 
 | 症狀 | 解決方法 |
 |------|----------|
@@ -46,7 +66,7 @@
 | Access blocked | OAuth consent 加 Test user |
 | listFolder 找不到 folder | folder 名：`CHW_Training_垃圾崗` |
 | Agent 不用 MCP | Prompt 寫明「用 Google Drive MCP」 |
-| 用哪個 model？ | **deepseek-v4-flash** |
+| 用哪個 model？ | **Auto** |
 | **全場 OAuth 失敗** | 改用下方 Watchdog 備用 |
 
 ### 備用：本地 Watchdog
@@ -71,7 +91,7 @@ python3 homework_watcher.py
 
 | 症狀 | 解決方法 |
 |------|----------|
-| 用哪個 model？ | **gemini-2.5-flash**（插圖） |
+| 用哪個 model？ | **Auto** |
 | 圖片生成失敗 | 用 placeholder；重點教 MARP 語法 |
 | 校徽不顯示 | 確認 `assets/school-logo.png` 存在 |
 

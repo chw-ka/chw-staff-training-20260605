@@ -3,8 +3,8 @@
 * **課程主題：** 2026年度 AI 驅動校園：從行政解放到高階自主開發
 * **對象：** 有意願深入學習 AI 應用的學校教職員（Power Users）
 * **時長：** 90 分鐘
-* **主要工具：** Cursor (Agent / Composer 模式)、MARP、**Gemini API**、**DeepSeek API**
-* **環境配置策略：** 學員課前按 [`handouts/05-api-key-application-guide.md`](handouts/05-api-key-application-guide.md) 自行申請 Gemini + DeepSeek Key；課堂 10 分鐘跟 [`handouts/01-cursor-setup-guide.md`](handouts/01-cursor-setup-guide.md) 填入 Cursor。**不使用 OpenAI API。**
+* **主要工具：** Cursor (Agent / Composer 模式)、MARP
+* **環境配置策略：** 課堂 10 分鐘跟 [`handouts/08-appendix-安裝清單.md`](handouts/08-appendix-安裝清單.md) 安裝 Cursor、Demo Login；Agent **Model 用 Auto**，唔使手動填 API Key。課後可選申請 Gemini / DeepSeek（見 [`05-api-key-application-guide.md`](handouts/05-api-key-application-guide.md)）。
 
 ---
 
@@ -19,28 +19,26 @@
 
 <br>(10") | 環境準備：<br>
 
-<br>駁通私家水喉 | **環境配置** | **對照筆記：** 開 [`handouts/05-api-key-application-guide.md`](handouts/05-api-key-application-guide.md)（課前已申請）及 [`handouts/01-cursor-setup-guide.md`](handouts/01-cursor-setup-guide.md)。**實操：** 填入 **Gemini API Key** 及 **DeepSeek API Key**（DeepSeek 經 OpenAI 兼容接口，Base URL = `https://api.deepseek.com`）。**測試：** Agent 分別用 `deepseek-v4-flash` 及 `gemini-2.5-flash` 發送書面語測試句。 |
+<br>駁通私家水喉 | **環境配置** | **講者：** 簡短帶做，詳見 [`handouts/08-appendix-安裝清單.md`](handouts/08-appendix-安裝清單.md)（Cursor、Demo Login 至 **7/3**、Python 優先由 Agent 自動裝）。**學員：** 跟附錄 Open Folder；Agent Model 選 **Auto**，即可開始活動一。 |
 | 20-40 min<br>
 
 <br>(20") | 活動 1：<br>
 
-<br>錄音變 Minutes | **API**<br>
+<br>Workflow — 錄音 → Minutes | **Workflow**<br>
 
-<br>**SKILL (提示詞)** | **痛點：** 1 小時科組會錄音，檔案大、網頁版易斷。**技術：** 解釋什麼是 **API**（大腦與服務的連接線），明白 API 能打破網頁版的字數與檔案限制。**SKILL 落地：** 利用「角色 + 學校背景 + 固定 Minutes 範本」的進階 Prompt，調用大模型 API 進行多步驟 Workflow 提煉。**Wow 點：** 投入真實口語錄音逐字稿，直接秒出結構完美的 Word 格式會議紀錄草稿。 |
-| 40-65 min<br>
+<br>**Vibe Coding**<br>
 
-<br>(25") | 活動 2：<br>
+<br>**SKILL** | **目標：** 學懂 **Agentic Workflow**，唔係淨係出一份紀錄。**完整流程：** 錄音 → 文字 → + 議程 + 格式 → 會議紀錄。**格式：** 第二步用通用範本；第三步（可選）用**上學年紀錄做格式參考**，配合今年議程同逐字稿寫**全新**紀錄（唔係合併）。**課堂：** 第一步用 ~45 秒 clip 示範；第二、三步用視藝科完整稿。**Wow 點：** 老師只需掌握 Input/Output。 |
+| 40-60 min<br>
 
-<br>【雲端神蹟】<br>
+<br>(20") | 活動 2：<br>
 
-<br>Google Drive 整理 | **MCP 概念**<br>
+<br>本機文件整理 | **Workflow**<br>
 
-<br>**雲端 AUTOMATION**<br>
+<br>**先傾後做** | **痛點：** 每日執檔、桌面亂。**做法：** 開 `activity-2-files`（含 SKILL、RULES）→ 先傾分類 → 定 profile → **讀檔內容**整理 inbox（唔按副檔名）→ `sorted/教學`、ICT 等。**Wow：** 一句執行，逐步 Approve。 |
+| 60-85 min<br>
 
-<br>**SKILL (Vibe Coding)** | **痛點：** 學校 Shared Drive / 個人 Drive 長期是垃圾崗，檔名亂、folder 沒有規律。**技術 (MCP)：** 用「隨意門」比喻 — MCP 連接 **Google Drive**，Agent 可直接 list / rename / move 雲端檔案。**AUTOMATION 實踐：** Cursor Agent Window (`Cmd/Ctrl + I`) 以書面語下令整理 `CHW_Training_垃圾崗`。**Wow 點：** 老師並排開 Cursor 與 browser，每按一次 **Approve**，看著 Drive 內檔案自動改名、建立 folder、移位 — 如同隱形助手。 |
-| 65-85 min<br>
-
-<br>(20") | 活動 3：<br>
+<br>(25") | 活動 3：<br>
 
 <br>MARP 直出 PPT | **API (多模態)**<br>
 
@@ -58,12 +56,13 @@
 | 板塊 | 檔案 |
 |------|------|
 | **API Key 申請（課前必做）** | [`handouts/05-api-key-application-guide.md`](handouts/05-api-key-application-guide.md) |
-| 駁通水喉（Cursor 設定） | [`handouts/01-cursor-setup-guide.md`](handouts/01-cursor-setup-guide.md) |
+| 駁通水喉（Cursor 快速開始） | [`handouts/01-cursor-setup-guide.md`](handouts/01-cursor-setup-guide.md) + [`08-appendix-安裝清單.md`](handouts/08-appendix-安裝清單.md) |
 | Prompt 懶人包 | [`handouts/02-prompt-cheatsheet.md`](handouts/02-prompt-cheatsheet.md) |
 | 課後 FAQ 與香港自救 | [`handouts/03-faq-hk-guide.md`](handouts/03-faq-hk-guide.md) |
 | Filesystem MCP 試玩 | [`handouts/04-filesystem-mcp-guide.md`](handouts/04-filesystem-mcp-guide.md) |
-| Google Drive MCP 設定 | [`handouts/06-google-drive-mcp-setup.md`](handouts/06-google-drive-mcp-setup.md) |
+| Google Drive MCP 設定（課後自學） | [`handouts/06-google-drive-mcp-setup.md`](handouts/06-google-drive-mcp-setup.md) + [`09-google-drive-self-study.md`](handouts/09-google-drive-self-study.md) |
 | 靜態網站發佈（teacher.chw.edu.hk） | [`handouts/07-static-site-publish.md`](handouts/07-static-site-publish.md) |
+| **附錄：安裝清單（Cursor / Demo Login / Python）** | [`handouts/08-appendix-安裝清單.md`](handouts/08-appendix-安裝清單.md) |
 
 ---
 
@@ -74,10 +73,12 @@
 | 總覽與快速開始 | [`README.md`](README.md) |
 | 課前 checklist | [`trainer/pre-class-checklist.md`](trainer/pre-class-checklist.md) |
 | 逐步 demo 腳本 | [`trainer/demo-script.md`](trainer/demo-script.md) |
+| 活動一詳細腳本 | [`trainer/activity-1-demo-script.md`](trainer/activity-1-demo-script.md) |
 | 各時段講解要點 | [`trainer/talking-points.md`](trainer/talking-points.md) |
 | 即場 troubleshooting | [`trainer/troubleshooting.md`](trainer/troubleshooting.md) |
 | 活動一：逐字稿 + 範本 + SKILL | [`activity-1-minutes/`](activity-1-minutes/) |
-| 活動二：Google Drive 雲端整理 | [`activity-2-gdrive/`](activity-2-gdrive/) |
+| 活動二：本機文件整理 | [`activity-2-files/`](activity-2-files/) |
+| Google Drive 整理（課後自學） | [`activity-2-gdrive/`](activity-2-gdrive/) |
 | 活動三：MARP 簡報模板 | [`activity-3-marp/`](activity-3-marp/) |
 | 活動四：靜態網站（HTML/CSS/JS） | [`activity-4-web/`](activity-4-web/) |
 | API Key 範本（講者填寫） | [`config/.env.example`](config/.env.example) |
@@ -85,7 +86,7 @@
 ### 講者課前必做
 
 1. 確認學員已完成 Google Drive MCP 設定（[`handouts/06-google-drive-mcp-setup.md`](handouts/06-google-drive-mcp-setup.md)）
-2. 確認學員已按 [`handouts/05-api-key-application-guide.md`](handouts/05-api-key-application-guide.md) 申請 Gemini + DeepSeek Key
+2. 確認學員已完成 Cursor 安裝及 Demo Login（API Key 課後可選，見 05 指南）
 2. 複製 `config/.env.example` → `config/.env`，填入講者自己的 Key 作 demo 用
 2. 放入校徽：`activity-3-marp/assets/school-logo.png`
 3. 預跑 [`trainer/demo-script.md`](trainer/demo-script.md) 全流程

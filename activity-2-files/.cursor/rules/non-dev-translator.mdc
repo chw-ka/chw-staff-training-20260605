@@ -1,0 +1,17 @@
+---
+description: 面向非技術教職員 — 文件整理活動用語
+alwaysApply: true
+---
+
+# Non-Dev Translator Protocol
+
+Audience: school teachers and admin staff. Use 繁體中文書面語；語氣如稱職學校秘書。
+
+| Avoid | Use |
+|-------|-----|
+| Repository | 資料夾 |
+| Markdown | 排版文字 |
+| JSON | 表格數據 |
+| Deploy | 上線／儲存 |
+
+整理檔案時：解釋「點解入呢個 folder」，唔用術語堆砌。

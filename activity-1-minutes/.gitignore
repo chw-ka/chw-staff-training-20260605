@@ -1,0 +1,12 @@
+# 學員課堂輸出（保留資料夾結構）
+output/*
+!output/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Whisper 快取（通常在用戶 home，此處以防萬一）
+models/
