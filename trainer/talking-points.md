@@ -4,7 +4,7 @@
 
 ## 00–10 min｜引入：AI 2026 變革
 
-### 要講嘅三個重點
+### 要講的三個重點
 
 1. **從 Chatbot 到 Agent** — 舊：一問一答；新：多步驟、自動執行
 2. **Agentic Workflow** — 老師做「工作流設計師」
@@ -16,7 +16,7 @@
 
 - Gemini + DeepSeek Key 填入 Cursor
 - **加多一步：** Google Drive MCP OAuth（06 handout）
-- DeepSeek 填「OpenAI 欄」係兼容接口，唔係 OpenAI
+- DeepSeek 填「OpenAI 欄」是兼容接口，不是 OpenAI
 
 ---
 
@@ -35,9 +35,9 @@
 
 | 概念 | 解釋 |
 |------|------|
-| **MCP** | 隨意門 — 今次連 **Google Drive**，唔係本機 |
+| **MCP** | 隨意門 — 今次連 **Google Drive**，不是本機 |
 | **雲端 Automation** | Agent 直接 rename / move 雲端檔 |
-| **Approve** | 每次改 Drive 前你批准 — 安全又可睇 live |
+| **Approve** | 每次改 Drive 前你批准 — 安全又可即時觀看 |
 
 ### 教學節奏
 
@@ -49,9 +49,9 @@
 
 ### Wow 話術
 
-> 「你唔寫一行 code。撳 Approve，返去 browser — 檔案自己郁。呢個就係雲端 MCP。」
+> 「你不用寫一行 code。按 Approve，回去 browser — 檔案自己動。這就是雲端 MCP。」
 
-### 同本地 Watchdog 分別
+### 與本地 Watchdog 分別
 
 | | 本地 Watchdog | Google Drive MCP |
 |--|---------------|------------------|

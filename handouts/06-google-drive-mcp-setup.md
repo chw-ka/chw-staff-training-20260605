@@ -1,14 +1,14 @@
 # Google Drive MCP 設定指南 — 活動二【雲端神蹟】
 
-> 課前必做（約 20–30 分鐘，只需做一次）。完成後 Agent 可直接整理你 Google Drive 入面嘅檔案。
+> 課前必做（約 20–30 分鐘，只需做一次）。完成後 Agent 可直接整理你 Google Drive 裡面的檔案。
 
 ---
 
-## 你需要咩？
+## 你需要什麼？
 
 - Google 帳號（個人 Gmail 或學校 Google Workspace）
-- Node.js 18+（同 Cursor 一樣需要 `npx`）
-- Google Cloud 免費 project（用嚟做 OAuth，唔使俾錢）
+- Node.js 18+（與 Cursor 一樣需要 `npx`）
+- Google Cloud 免費 project（用來做 OAuth，不必付費）
 
 ---
 
@@ -32,8 +32,8 @@
 
 1. **APIs & Services** → **OAuth consent screen**
 2. User type：
-   - 學校 Google Workspace → 可揀 **Internal**（較簡單）
-   - 個人 Gmail → 揀 **External**，並加自己做 **Test user**
+   - 學校 Google Workspace → 可選 **Internal**（較簡單）
+   - 個人 Gmail → 選 **External**，並加自己做 **Test user**
 3. App name：`CHW Drive MCP`（任意）
 4. User support email：你的 email
 5. Scopes：可先跳過，首次 auth 時會請求
@@ -52,7 +52,7 @@
 
 ## Step 5：放入 project
 
-1. 將下載嘅 JSON 複製到：
+1. 將下載的 JSON 複製到：
    ```
    config/gcp-oauth.keys.json
    ```
@@ -72,8 +72,8 @@ npx -y @piotr-agier/google-drive-mcp auth
 ```
 
 1. 瀏覽器會彈出 Google 登入
-2. 揀你的帳號 → 允許存取 Drive
-3. 成功後 token 儲存喺 `~/.config/google-drive-mcp/tokens.json`
+2. 選你的帳號 → 允許存取 Drive
+3. 成功後 token 儲存在 `~/.config/google-drive-mcp/tokens.json`
 
 ---
 
@@ -116,7 +116,7 @@ npx -y @piotr-agier/google-drive-mcp auth
 Agent（`Cmd/Ctrl + I`）輸入：
 
 ```
-用 Google Drive MCP listFolder 列出「CHW_Training_垃圾崗」入面有咩檔案。
+用 Google Drive MCP listFolder 列出「CHW_Training_垃圾崗」裡面有哪些檔案。
 ```
 
 有列出 4 個亂碼檔 → ✅ 準備完成
@@ -127,19 +127,19 @@ Agent（`Cmd/Ctrl + I`）輸入：
 
 | 問題 | 解決 |
 |------|------|
-| `redirect_uri_mismatch` | OAuth client 必須係 **Desktop app** 類型 |
-| MCP 紅色 / 連唔到 | 重新跑 `npx @piotr-agier/google-drive-mcp auth` |
+| `redirect_uri_mismatch` | OAuth client 必須是 **Desktop app** 類型 |
+| MCP 紅色 / 連不到 | 重新跑 `npx @piotr-agier/google-drive-mcp auth` |
 | 「Access blocked」 | External app 要加自己做 Test user |
-| Token 7 日過期 | OAuth app 仍係 Testing 狀態；重新 auth 或 publish app |
+| Token 7 日過期 | OAuth app 仍是 Testing 狀態；重新 auth 或 publish app |
 | 校園封 OAuth | 用個人 hotspot 試；或改用本地 Watchdog 備用方案 |
 
 ---
 
 ## 安全提示
 
-- 只授權**你自己**嘅 Drive
+- 只授權**你自己**的 Drive
 - 課堂只用 **CHW_Training_*** 測試 folder
-- 唔好將 `gcp-oauth.keys.json` 或 token 分享俾他人
+- 不要把 `gcp-oauth.keys.json` 或 token 分享給他人
 
 ---
 

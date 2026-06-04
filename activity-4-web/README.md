@@ -6,7 +6,7 @@
 
 - 由自然語言需求 → 生成完整前端（HTML/CSS/JS）
 - 示範 UI/UX 基本原則（排版、可讀性、互動回饋）
-- 為日後「放 Share Drive → webhost 自動發佈」鋪路
+- 為「放入 NAS `_web` → teacher.chw.edu.hk 自動發佈」鋪路
 
 ## 本活動內容
 
@@ -25,17 +25,16 @@
 3. 要求 Agent：
    - 有 1 個表單 + 1 個結果區 + 1 個複製按鈕
    - 有現代 UI（卡片、grid、responsive）
-   - JS 有基本 validation 同提示文字
+   - JS 有基本 validation 與提示文字
 4. 打開 `output/index.html` 即時預覽
 
-## Hosting（你稍後提供 webhost 後接）
+## Hosting（teacher.chw.edu.hk）
 
-你提到「放係某個 Share Drive 就可以網上 access」——
+學校教師網站 **teacher.chw.edu.hk** 會讀取 NAS 上各老師 `_web` folder 的靜態檔：
 
-- **Google Drive 本身唔係靜態網站 hosting**（通常需要第三方 webhost 去讀 Drive folder）
-- 所以本活動輸出固定為：**一個 folder 入面幾個靜態檔**（index.html / styles.css / app.js / assets）
+- NAS：`\\10.10.0.13\staff\{代碼}\_web\`
+- 公開網址：`https://teacher.chw.edu.hk/{代碼}/`
 
-到你提供 webhost 後，我可以再：
-- 寫一份 `handouts/07-webhost-publish.md`（針對你個 host）
-- 幫你加「一鍵 export / publish」嘅流程（例如打包 zip、或生成特定 folder 結構）
+本活動輸出固定為：**一個 folder 裡面幾個靜態檔**（index.html / styles.css / app.js / assets）
 
+發佈步驟見 [`handouts/07-static-site-publish.md`](../handouts/07-static-site-publish.md)。

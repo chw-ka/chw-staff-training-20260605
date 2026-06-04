@@ -4,18 +4,18 @@
 
 ## 關於 API Key
 
-**Q：課堂用嘅 Key 課後仲用得？**  
-A：如果你用**自己申請**嘅 Key，當然可以。請勿將 Key 上傳 GitHub 或分享俾他人。
+**Q：課堂用的 Key 課後還能用嗎？**  
+A：如果你用**自己申請**的 Key，當然可以。請勿將 Key 上傳 GitHub 或分享給他人。
 
-**Q：我唔記得申請步驟？**  
-A：重睇 [`05-api-key-application-guide.md`](05-api-key-application-guide.md)。
+**Q：我不記得申請步驟？**  
+A：請重閱 [`05-api-key-application-guide.md`](05-api-key-application-guide.md)。
 
 **Q：一定要兩個 Key 都有？**  
-A：唔一定。**DeepSeek** 可完成活動一、二；**Gemini** 擅長活動三插圖。建議兩個都申請。
+A：不一定。**DeepSeek** 可完成活動一、二；**Gemini** 擅長活動三插圖。建議兩個都申請。
 
 ---
 
-## Gemini vs DeepSeek 點揀？
+## Gemini vs DeepSeek 如何選擇？
 
 | 方案 | 優點 | 缺點 | 適合 |
 |------|------|------|------|
@@ -44,7 +44,7 @@ A：唔一定。**DeepSeek** 可完成活動一、二；**Gemini** 擅長活動�
    - **Override Base URL**：`https://api.deepseek.com`
    - Add model：`deepseek-v4-flash`
 
-> 呢度嘅「OpenAI API Key」欄只係 Cursor 接口名稱，**唔代表用 OpenAI**。
+> 這裡的「OpenAI API Key」欄只是 Cursor 接口名稱，**不代表使用 OpenAI**。
 
 ---
 
@@ -66,11 +66,11 @@ Add model：`deepseek-r1:8b`
 
 ## 常見問題
 
-**Q：Cursor 同 ChatGPT 有咩分別？**  
-A：Cursor 係 IDE，Agent 可讀寫 project 檔案、跑 script。ChatGPT 主要係網頁對話。
+**Q：Cursor 與 ChatGPT 有什麼分別？**  
+A：Cursor 是 IDE，Agent 可讀寫 project 檔案、跑 script。ChatGPT 主要是網頁對話。
 
-**Q：MCP 係咩？**  
-A：Model Context Protocol — 俾 AI 標準化連接本機檔案、資料庫等。見 [`04-filesystem-mcp-guide.md`](04-filesystem-mcp-guide.md)。
+**Q：MCP 是什麼？**  
+A：Model Context Protocol — 讓 AI 標準化連接本機檔案、資料庫等。見 [`04-filesystem-mcp-guide.md`](04-filesystem-mcp-guide.md)。
 
 **Q：DeepSeek 402 / balance 不足？**  
 A：去 platform.deepseek.com 充值。
@@ -78,10 +78,10 @@ A：去 platform.deepseek.com 充值。
 **Q：Gemini quota exceeded？**  
 A：等翌日 free tier 重置，或改用 DeepSeek。
 
-**Q：校園 Wi-Fi 連唔到 API？**  
+**Q：校園 Wi-Fi 連不到 API？**  
 A：試 hotspot；向 IT 查是否封鎖 `api.deepseek.com` / Google API；敏感工作改用 Ollama。
 
-**Q：MARP 點 export PPT？**  
+**Q：MARP 如何 export PPT？**  
 A：裝 Marp for VS Code → Export；或 `npx @marp-team/marp-cli file.md --pptx`
 
 ---

@@ -4,7 +4,7 @@
 > **時長：** 90 分鐘 | **對象：** Power Users 教職員  
 > **培訓日期：** 2026-06-05（可按實際日期調整）
 
-本 repository 包含講者與學員所需的**全部課堂素材**。老師只需 clone / 下載此 project，跟住 handouts 逐步操作即可。
+本 repository 包含講者與學員所需的**全部課堂素材**。老師只需 clone / 下載此 project，依照 handouts 逐步操作即可。
 
 ---
 
@@ -22,16 +22,22 @@ chw-staff-training-20260605/
 │   ├── 04-filesystem-mcp-guide.md ← Filesystem MCP 試玩
 │   ├── 05-api-key-application-guide.md ← API Key 申請（課前必做）
 │   ├── 06-google-drive-mcp-setup.md ← 活動二 Google Drive MCP
-│   └── 07-static-site-publish.md ← 活動四發佈（通用）
+│   └── 07-static-site-publish.md ← 活動四發佈（teacher.chw.edu.hk）
 │
 ├── .cursor/
+│   ├── rules/                    ← Project AI 規則（non-dev 語氣等）
 │   └── mcp.json                  ← Filesystem MCP 設定（project 級）
 │
 ├── trainer/                      ← 講者專用（勿派發給學員）
 │   ├── pre-class-checklist.md    ← 課前 48 小時 / 當日 checklist
 │   ├── demo-script.md            ← 逐步 demo 腳本（含話術）
 │   ├── talking-points.md         ← 各時段核心概念講解要點
-│   └── troubleshooting.md        ← 常見問題即場應對
+│   ├── troubleshooting.md        ← 常見問題即場應對
+│   ├── on-stage-checklist.md     ← 現場 Demo 不出錯
+│   ├── rag-at-folder-metaphor.md ← @Folder「實習老師」比喻
+│   ├── demo-vba-pptx/            ← VBA 10 張 PPT 一鍵生成
+│   ├── demo-chaotic-transcript/  ← 混亂逐字稿 → Minutes
+│   └── demo-student-compositions/← @Folder 評作文 demo
 │
 ├── activity-1-minutes/           ← 活動一：錄音變 Minutes
 │   ├── sample-meeting-transcript.txt
@@ -89,7 +95,7 @@ chw-staff-training-20260605/
 
 ### 課後
 
-1. 提醒學員妥善保管自己嘅 API Key，勿分享。
+1. 提醒學員妥善保管自己的 API Key，勿分享。
 2. 將此 repo 連結發給老師，鼓勵課後自行練習。
 3. 收集 feedback（可選：Google Form）。
 

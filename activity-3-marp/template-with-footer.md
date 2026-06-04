@@ -50,7 +50,7 @@ footer: '![logo](assets/school-logo.png) 迦密聖道中學 Carmel Holy Word Sec
 
 <!-- _footer: '![logo](assets/school-logo.png) CHW — 視藝科' -->
 
-右邊背景圖可以換成 Gemini 生成嘅插圖。
+右邊背景圖可以換成 Gemini 生成的插圖。
 
 ---
 

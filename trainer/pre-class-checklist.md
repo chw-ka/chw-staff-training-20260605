@@ -12,7 +12,7 @@
 
 ## 24 小時前
 
-- [ ] 統計：幾多位未完成 Google OAuth / API Key
+- [ ] 統計：幾位未完成 Google OAuth / API Key
 - [ ] 準備備用：OAuth 全掛 → 本地 Watchdog
 - [ ] 列印/PDF：`handouts/` 05、06、01、02、03
 
@@ -26,7 +26,7 @@
 ## 當日（開課前 5 分鐘）
 
 - [ ] 提醒：Chrome 開 Drive，Cursor 開 project
-- [ ] 快速舉手：邊位 MCP 未綠？
+- [ ] 快速舉手：哪位 MCP 未綠？
 
 ---
 
@@ -43,11 +43,11 @@
 1. **Cursor**：https://cursor.com
 2. **API Key**（Gemini + DeepSeek）：[`05-api-key-application-guide.md`](../handouts/05-api-key-application-guide.md)
 3. **Google Drive MCP**（活動二【雲端神蹟】）：[`06-google-drive-mcp-setup.md`](../handouts/06-google-drive-mcp-setup.md)
-   - 完成 OAuth 後，喺 Drive 建立 folder **CHW_Training_垃圾崗**
+   - 完成 OAuth 後，在 Drive 建立 folder **CHW_Training_垃圾崗**
    - 上傳 project 內 `activity-2-gdrive/samples/` 4 個檔案
 4. **下載培訓 project**：[連結]
 
-課堂請**並排開 Cursor 同 Google Drive 網頁**。
+課堂請**並排開 Cursor 與 Google Drive 網頁**。
 
 如有問題，聯絡 [你的名字]。
 

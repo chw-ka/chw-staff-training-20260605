@@ -3,8 +3,8 @@
 **[並排：Cursor + Chrome drive.google.com]**
 
 **話術：**
-> 「第二個痛點：Google Drive 垃圾崗。今日唔寫 Python — 用 MCP 直接郁雲端。
-> 大家 Drive 開住 `CHW_Training_垃圾崗`，Cursor 貼 Prompt，每次 Approve 就返去 browser 睇。」
+> 「第二個痛點：Google Drive 垃圾崗。今日不寫 Python — 用 MCP 直接操作雲端。
+> 大家 Drive 開著 `CHW_Training_垃圾崗`，Cursor 貼 Prompt，每次 Approve 就回去 browser 看。」
 
 **動作：**
 1. 展示垃圾崗 4 個亂碼檔（10 秒）
@@ -13,9 +13,9 @@
 4. 開 `CHW_Training_已整理/視覺藝術/` 展示成果
 
 **話術（第一個 move 後）：**
-> 「有冇見到？你冇郁過 browser，檔案自己走咗。呢個就係雲端自動化。」
+> 「有沒有看到？你沒有動過 browser，檔案自己移了。這就是雲端自動化。」
 
-**全班練習：** 跟住 Approve 完整整理（約 8 min）
+**全班練習：** 跟著 Approve 完整整理（約 8 min）
 
 **備用（OAuth 全掛）：**
 ```bash

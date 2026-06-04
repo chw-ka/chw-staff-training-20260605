@@ -6,7 +6,7 @@
 
 ---
 
-## 本課程用邊個 Model？
+## 本課程用哪個 Model？
 
 | 活動 | 建議 Model | 原因 |
 |------|------------|------|
@@ -41,7 +41,7 @@ Agent 視窗左上角可切換 Model。
 
 1. 在 Models 頁面搜尋 **Google** 或 **Gemini**
 2. 找到 **Google API Key** / **Gemini API Key** 欄位
-3. 貼上你嘅 Gemini Key（`AIzaSy...`）
+3. 貼上你的 Gemini Key（`AIzaSy...`）
 4. 在 Models 列表 **Add model**，輸入：
    ```
    gemini-2.5-flash
@@ -61,7 +61,7 @@ Cursor Settings → Models
 
 ## Step 3B：設定 DeepSeek API Key
 
-DeepSeek 使用 **OpenAI 兼容格式** 接入 Cursor — 呢度填嘅係 **DeepSeek Key**，唔係 OpenAI。
+DeepSeek 使用 **OpenAI 兼容格式** 接入 Cursor — 這裡填的是 **DeepSeek Key**，不是 OpenAI。
 
 1. 仍在 **Models** 頁面
 2. 找到 **OpenAI API Key** 欄位 → 貼上 **DeepSeek Key**（`sk-...`）
@@ -70,7 +70,7 @@ DeepSeek 使用 **OpenAI 兼容格式** 接入 Cursor — 呢度填嘅係 **Deep
    ```
    https://api.deepseek.com
    ```
-   > ⚠️ **不要**加 `/v1`（Cursor 會自己處理路徑；加咗可能 404）
+   > ⚠️ **不要**加 `/v1`（Cursor 會自己處理路徑；加了可能 404）
 5. **Add model**，輸入：
    ```
    deepseek-v4-flash
@@ -81,14 +81,14 @@ DeepSeek 使用 **OpenAI 兼容格式** 接入 Cursor — 呢度填嘅係 **Deep
 
 ```
 Cursor Settings → Models
-  ├── OpenAI API Key              ← 貼 DeepSeek 的 sk-...（唔係 OpenAI！）
+  ├── OpenAI API Key              ← 貼 DeepSeek 的 sk-...（不是 OpenAI！）
   ├── Override Base URL  ☑
   ├── Base URL                    ← https://api.deepseek.com
   └── Models 列表
         └── deepseek-v4-flash  ☑      ← 啟用
 ```
 
-> **重要：** 我哋**冇用 OpenAI**，只係借用 Cursor 嘅「兼容接口」去連 DeepSeek。
+> **重要：** 我們**沒有使用 OpenAI**，只是借用 Cursor 的「兼容接口」去連 DeepSeek。
 
 ---
 
@@ -99,13 +99,13 @@ Cursor Settings → Models
 3. 輸入：
 
 ```
-你好，請用香港廣東話回覆我：DeepSeek 連線正常嗎？
+你好，請用繁體中文書面語回覆我：DeepSeek 連線正常嗎？
 ```
 
 4. 再切換 **gemini-2.5-flash**，輸入：
 
 ```
-你好，請用香港廣東話回覆我：Gemini 連線正常嗎？
+你好，請用繁體中文書面語回覆我：Gemini 連線正常嗎？
 ```
 
 兩個都有回覆 → ✅ 設定成功
@@ -127,11 +127,11 @@ Cursor Settings → Models
 
 | 錯誤 | 檢查 |
 |------|------|
-| Invalid API Key | Key 是否完整複製；Gemini 用 AI Studio 嗰把，DeepSeek 用 platform 嗰把 |
+| Invalid API Key | Key 是否完整複製；Gemini 用 AI Studio 那把，DeepSeek 用 platform 那把 |
 | 404 / Connection error | DeepSeek Base URL 是否 `https://api.deepseek.com`（無 `/v1`） |
 | 402 / Insufficient balance | DeepSeek 要充值（見 05 申請指南） |
 | Model not found | Model 名稱是否 `deepseek-v4-flash` / `gemini-2.5-flash` |
-| 校園 Wi-Fi 連唔到 | 試手機 hotspot；DeepSeek 可能被 IT 封鎖 |
+| 校園 Wi-Fi 連不到 | 試手機 hotspot；DeepSeek 可能被 IT 封鎖 |
 
 ---
 

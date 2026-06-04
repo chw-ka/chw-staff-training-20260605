@@ -9,8 +9,8 @@
 **[投影 LessonPlan.md 或簡短 intro slide]**
 
 **話術：**
-> 「各位同事午安/早安。今日 90 分鐘，我哋唔係學 ChatGPT 問答，而係學點樣用 Cursor Agent 幫你自動做 meeting minutes、執 file、出簡報。
-> 完堂時你會有一條完整 workflow，可以直接帶返去科組用。」
+> 「各位同事午安/早安。今日 90 分鐘，我們不是學 ChatGPT 問答，而是學如何用 Cursor Agent 自動做 meeting minutes、整理檔案、出簡報。
+> 完堂時你會有一條完整 workflow，可以直接帶回科組使用。」
 
 **動作：** 無需操作電腦。
 
@@ -21,16 +21,16 @@
 **[投影 handouts/01-cursor-setup-guide.md]**
 
 **話術：**
-> 「首先『駁通水喉』。我哋唔用 OpenAI，只用 **Gemini** 同 **DeepSeek** 兩個 API。
-> 請大家開 Cursor，Open Folder 揀今日個 project，跟住 01 設定指南填入你課前申請嘅 Key。」
+> 「首先『駁通水喉』。我們不用 OpenAI，只用 **Gemini** 與 **DeepSeek** 兩個 API。
+> 請大家開 Cursor，Open Folder 選今日這個 project，跟著 01 設定指南填入你課前申請的 Key。」
 
 **動作：**
 1. 示範 Gemini Key → `gemini-2.5-flash`
 2. 示範 DeepSeek Key → Override URL `https://api.deepseek.com` → `deepseek-v4-flash`
 3. 全班跟做，講者巡場
-4. `Cmd+I` → 選 deepseek-v4-flash →「你好，請用香港廣東話回覆我：連線正常嗎？」
+4. `Cmd+I` → 選 deepseek-v4-flash →「你好，請用繁體中文書面語回覆我：連線正常嗎？」
 
-**成功指標：** 全班收到廣東話回覆。
+**成功指標：** 全班收到繁體中文書面語回覆。
 
 **若有人 lag：** 已完成的同事先閱讀 `handouts/02-prompt-cheatsheet.md`。
 
@@ -41,8 +41,8 @@
 **[開啟 activity-1-minutes/]**
 
 **話術：**
-> 「大家有冇試過一個鐘科組會，錄音轉文字好長，网页 paste 唔晒？
-> API 就係打破呢個限制。我哋仲會用 SKILL — 把寫 minutes 嘅規則預先寫好，次次都用同一標準。」
+> 「大家有沒有試過一個鐘科組會，錄音轉文字很長，網頁貼不上？
+> API 就是打破這個限制。我們還會用 SKILL — 把寫 minutes 的規則預先寫好，每次都用同一標準。」
 
 **動作：**
 1. 簡介 `sample-meeting-transcript.txt`（1 min）
@@ -52,7 +52,7 @@
 5. 開啟 output，對照 `expected-output-sample.md`
 
 **話術（生成後）：**
-> 「留意決議有冇漏、日期啱唔啱。AI 係草稿，你係 editor。」
+> 「留意決議有沒有漏、日期是否正確。AI 是草稿，你是 editor。」
 
 **全班練習：** 用同一 Prompt 自己跑一遍（約 8 min）。
 
@@ -63,8 +63,8 @@
 **[並排：Cursor + Chrome drive.google.com]**
 
 **話術：**
-> 「第二個痛點：Google Drive 垃圾崗。今日唔寫 Python — 用 MCP 直接郁雲端。
-> 大家 Drive 開住 `CHW_Training_垃圾崗`，Cursor 貼 Prompt，每次 Approve 就返去 browser 睇。」
+> 「第二個痛點：Google Drive 垃圾崗。今日不寫 Python — 用 MCP 直接操作雲端。
+> 大家 Drive 開著 `CHW_Training_垃圾崗`，Cursor 貼 Prompt，每次 Approve 就回去 browser 看。」
 
 **動作：**
 1. 展示垃圾崗 4 個亂碼檔
@@ -72,7 +72,7 @@
 3. 慢動作 Approve：`listFolder` → `createFolder` → `renameItem` → `moveItem`
 4. 開 `CHW_Training_已整理/視覺藝術/` 展示成果
 
-**全班練習：** 跟住 Approve 完整整理（約 8 min）
+**全班練習：** 跟著 Approve 完整整理（約 8 min）
 
 **備用（OAuth 全掛）：** 見 `activity-2-watchdog/` + `trainer/troubleshooting.md`
 
@@ -83,8 +83,8 @@
 **[開啟 activity-3-marp/]**
 
 **話術：**
-> 「校長話：聽日早會你要匯報。傳統開 PowerPoint 起碼一個鐘。
-> MARP 用 Markdown 寫 slide；Agent 讀頭先 minutes，直接出簡報。」
+> 「校長說：明天早會你要匯報。傳統開 PowerPoint 起碼一個鐘。
+> MARP 用 Markdown 寫 slide；Agent 讀剛才的 minutes，直接出簡報。」
 
 **動作：**
 1. 快速展示 `marp-syntax-reference.md` 的 `bg left` 語法（2 min）
@@ -94,7 +94,7 @@
 5. 開 Marp Preview 或 export PDF
 
 **若 Gemini 圖片失敗：**
-> 「圖片生成需要額外 API；今日重點係 MARP workflow，placeholder 都得。」
+> 「圖片生成需要額外 API；今日重點是 MARP workflow，placeholder 也可以。」
 
 **全班練習：** 生成簡報或改 template（約 8 min）。
 
@@ -104,8 +104,8 @@
 
 **話術：**
 > 「今日三個 activity：會議 → 紀錄 → 簡報；Google Drive 垃圾崗 → 雲端自動整理。
-> 處理學生私隱時，請考虑用 Ollama 本地模型 — FAQ 有教。
-> **重要：API Key 係你自己嘅，課後繼續用。** DeepSeek 記得 check 餘額。詳見 handouts/03-faq-hk-guide.md。
+> 處理學生私隱時，請考慮用 Ollama 本地模型 — FAQ 有教。
+> **重要：API Key 是你自己的，課後繼續用。** DeepSeek 記得 check 餘額。詳見 handouts/03-faq-hk-guide.md。
 > 多謝大家，祝各位成為工作流總設計師！」
 
 **動作：** 派發/分享 handouts 連結，Q&A（可 overrun 1–2 min）。

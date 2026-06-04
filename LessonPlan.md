@@ -19,14 +19,14 @@
 
 <br>(10") | 環境準備：<br>
 
-<br>駁通私家水喉 | **環境配置** | **對照筆記：** 開 [`handouts/05-api-key-application-guide.md`](handouts/05-api-key-application-guide.md)（課前已申請）及 [`handouts/01-cursor-setup-guide.md`](handouts/01-cursor-setup-guide.md)。**實操：** 填入 **Gemini API Key** 同 **DeepSeek API Key**（DeepSeek 經 OpenAI 兼容接口，Base URL = `https://api.deepseek.com`）。**測試：** Agent 分別用 `deepseek-v4-flash` 同 `gemini-2.5-flash` 打廣東話測試句。 |
+<br>駁通私家水喉 | **環境配置** | **對照筆記：** 開 [`handouts/05-api-key-application-guide.md`](handouts/05-api-key-application-guide.md)（課前已申請）及 [`handouts/01-cursor-setup-guide.md`](handouts/01-cursor-setup-guide.md)。**實操：** 填入 **Gemini API Key** 及 **DeepSeek API Key**（DeepSeek 經 OpenAI 兼容接口，Base URL = `https://api.deepseek.com`）。**測試：** Agent 分別用 `deepseek-v4-flash` 及 `gemini-2.5-flash` 發送書面語測試句。 |
 | 20-40 min<br>
 
 <br>(20") | 活動 1：<br>
 
 <br>錄音變 Minutes | **API**<br>
 
-<br>**SKILL (提示詞)** | **痛點：** 1 小時科組會錄音，檔案大、網頁版易斷。**技術：** 解釋什麼是 **API**（大腦與服務的連接線），明白 API 能打破網頁版的字數與檔案限制。**SKILL 落地：** 利用「角色 + 學校背景 + 固定 Minutes 範本」的進階 Prompt，調用大模型 API 進行多步驟 Workflow 提煉。**Wow 點：** 丟入真實廣東話錄音，直接秒出結構完美的 Word 格式會議紀錄草稿。 |
+<br>**SKILL (提示詞)** | **痛點：** 1 小時科組會錄音，檔案大、網頁版易斷。**技術：** 解釋什麼是 **API**（大腦與服務的連接線），明白 API 能打破網頁版的字數與檔案限制。**SKILL 落地：** 利用「角色 + 學校背景 + 固定 Minutes 範本」的進階 Prompt，調用大模型 API 進行多步驟 Workflow 提煉。**Wow 點：** 投入真實口語錄音逐字稿，直接秒出結構完美的 Word 格式會議紀錄草稿。 |
 | 40-65 min<br>
 
 <br>(25") | 活動 2：<br>
@@ -37,7 +37,7 @@
 
 <br>**雲端 AUTOMATION**<br>
 
-<br>**SKILL (Vibe Coding)** | **痛點：** 學校 Shared Drive / 個人 Drive 長期係垃圾崗，檔名亂、folder 冇規律。**技術 (MCP)：** 用「隨意門」比喻 — MCP 連接 **Google Drive**，Agent 可直接 list / rename / move 雲端檔案。**AUTOMATION 實踐：** Cursor Agent Window (`Cmd/Ctrl + I`) 用廣東話下令整理 `CHW_Training_垃圾崗`。**Wow 點：** 老師並排開 Cursor 同 browser，每按一次 **Approve**，睇住 Drive 入面檔案自己改名、開 folder、移位 — 好似隱形人幫手。 |
+<br>**SKILL (Vibe Coding)** | **痛點：** 學校 Shared Drive / 個人 Drive 長期是垃圾崗，檔名亂、folder 沒有規律。**技術 (MCP)：** 用「隨意門」比喻 — MCP 連接 **Google Drive**，Agent 可直接 list / rename / move 雲端檔案。**AUTOMATION 實踐：** Cursor Agent Window (`Cmd/Ctrl + I`) 以書面語下令整理 `CHW_Training_垃圾崗`。**Wow 點：** 老師並排開 Cursor 與 browser，每按一次 **Approve**，看著 Drive 內檔案自動改名、建立 folder、移位 — 如同隱形助手。 |
 | 65-85 min<br>
 
 <br>(20") | 活動 3：<br>
@@ -63,7 +63,7 @@
 | 課後 FAQ 與香港自救 | [`handouts/03-faq-hk-guide.md`](handouts/03-faq-hk-guide.md) |
 | Filesystem MCP 試玩 | [`handouts/04-filesystem-mcp-guide.md`](handouts/04-filesystem-mcp-guide.md) |
 | Google Drive MCP 設定 | [`handouts/06-google-drive-mcp-setup.md`](handouts/06-google-drive-mcp-setup.md) |
-| 靜態網站發佈（通用版） | [`handouts/07-static-site-publish.md`](handouts/07-static-site-publish.md) |
+| 靜態網站發佈（teacher.chw.edu.hk） | [`handouts/07-static-site-publish.md`](handouts/07-static-site-publish.md) |
 
 ---
 
@@ -86,7 +86,7 @@
 
 1. 確認學員已完成 Google Drive MCP 設定（[`handouts/06-google-drive-mcp-setup.md`](handouts/06-google-drive-mcp-setup.md)）
 2. 確認學員已按 [`handouts/05-api-key-application-guide.md`](handouts/05-api-key-application-guide.md) 申請 Gemini + DeepSeek Key
-2. 複製 `config/.env.example` → `config/.env`，填入講者自己嘅 Key 作 demo 用
+2. 複製 `config/.env.example` → `config/.env`，填入講者自己的 Key 作 demo 用
 2. 放入校徽：`activity-3-marp/assets/school-logo.png`
 3. 預跑 [`trainer/demo-script.md`](trainer/demo-script.md) 全流程
 4. 派發課前電郵（見 checklist 範本）
@@ -99,6 +99,6 @@
 
 **活動四：生成 HTML+CSS+JS（教學用靜態網站）**
 
-- **目標**：用 Cursor Agent 生成一個可直接上線嘅靜態小工具（無需 build）
+- **目標**：用 Cursor Agent 生成一個可直接上線的靜態小工具（無需 build）
 - **素材**：`activity-4-web/`（starter + prompts）
-- **發佈**：先跟通用版 `handouts/07-static-site-publish.md`；待你提供 webhost，我再客製成「逐步截圖版」
+- **發佈**：跟 [`handouts/07-static-site-publish.md`](handouts/07-static-site-publish.md) 將靜態檔放入 NAS `_web` folder，經 `teacher.chw.edu.hk` 對外發佈

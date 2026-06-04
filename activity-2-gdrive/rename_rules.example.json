@@ -1,5 +1,5 @@
 {
-  "_comment": "Google Drive 整理規則 — 對應 samples/ 入面嘅亂碼檔名",
+  "_comment": "Google Drive 整理規則 — 對應 samples/ 裡面的亂碼檔名",
   "inbox_folder_name": "CHW_Training_垃圾崗",
   "output_folder_name": "CHW_Training_已整理",
   "prefix": "【功課】",

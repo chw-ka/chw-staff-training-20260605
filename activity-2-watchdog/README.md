@@ -5,7 +5,7 @@
 
 ## 何時用
 
-- Google Drive MCP 全場連唔到
+- Google Drive MCP 全場連不到
 - 來不及完成 OAuth 設定
 
 ## 快速啟動

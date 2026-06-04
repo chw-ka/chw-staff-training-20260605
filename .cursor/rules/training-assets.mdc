@@ -1,0 +1,17 @@
+---
+description: 生成本培訓包素材時的語言、語氣與交付標準
+globs: handouts/**,trainer/**,activity-*/**
+alwaysApply: false
+---
+
+# Training Asset Standards
+
+When creating or editing training materials in this repo:
+
+1. **Language:** 繁體中文書面語（面向學員的說明、講義、講者腳本）；正式會議紀錄／表格亦用書面語
+2. **Demos:** Prefer error-free, copy-paste-ready templates (VBA, prompts, sample transcripts)
+3. **Minutes format:** Use columns 議項 / 內容摘要 / 跟進人員·部門 / 限期 when showing school-format output
+4. **Metaphors over jargon:** Explain `@Folder` as giving the AI intern the right filing cabinet — not vector databases
+5. **Assets live in:** `trainer/` (講者), `handouts/` (學員), `activity-*/` (課堂實操)
+
+Reference deliverables: `trainer/on-stage-checklist.md`, `trainer/rag-at-folder-metaphor.md`, `trainer/demo-vba-pptx/`, `trainer/demo-chaotic-transcript/`

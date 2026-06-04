@@ -1,11 +1,11 @@
 # API Key 申請指南 — Gemini + DeepSeek
 
 > **課前必做**（建議培訓前 3–7 天完成）  
-> 本課程**不使用 OpenAI API**。我哋只用 **Google Gemini** 同 **DeepSeek** 兩個平台。
+> 本課程**不使用 OpenAI API**。我們只用 **Google Gemini** 與 **DeepSeek** 兩個平台。
 
 ---
 
-## 你需要準備咩？
+## 你需要準備什麼？
 
 | 平台 | 用途 | 費用 | 香港申請 |
 |------|------|------|----------|
@@ -26,18 +26,18 @@
 ### Step 2：建立 API Key
 
 1. 按 **Create API Key**
-2. 選擇 Google Cloud Project（可揀 **Create project** 新建一個，例如 `chw-cursor-training`）
-3. 複製產生嘅 Key（格式：`AIzaSy...`）
-4. **立即貼去安全位置**（Keep、1Password、或等下填入 Cursor）— Key 之後可能唔再完整顯示
+2. 選擇 Google Cloud Project（可選 **Create project** 新建一個，例如 `chw-cursor-training`）
+3. 複製產生的 Key（格式：`AIzaSy...`）
+4. **立即貼至安全位置**（Keep、1Password、或等下填入 Cursor）— Key 之後可能不再完整顯示
 
 ### Step 3：確認免費額度
 
-- Gemini 有每日免費 request 限額（足夠培訓同日常試用）
+- Gemini 有每日免費 request 限額（足夠培訓與日常試用）
 - 詳情：https://ai.google.dev/pricing
 
 ### 安全提醒
 
-- ❌ 勿將 Key 貼去 WhatsApp 群組、GitHub、公開 document
+- ❌ 勿將 Key 貼至 WhatsApp 群組、GitHub、公開 document
 - ❌ 勿用「分享螢幕」展示 Key
 - ✅ 若 Key 外洩，去 AI Studio **刪除並重新建立**
 
@@ -59,7 +59,7 @@
 
 ### Step 3：充值（Top-up）
 
-DeepSeek 係**按用量付費**，需預先充值少量金額：
+DeepSeek 是**按用量付費**，需預先充值少量金額：
 
 1. 進入 **Top up** / 充值頁
 2. 充值建議：**¥10–20 人民幣**已足夠數個月輕量使用
@@ -67,7 +67,7 @@ DeepSeek 係**按用量付費**，需預先充值少量金額：
 
 > 培訓當日若 balance 為 0，Agent 會回覆 402 / insufficient balance。
 
-### Step 4：記低 Model 名稱
+### Step 4：記下 Model 名稱
 
 在 Cursor 要用以下 model name（2026 年常用）：
 
@@ -83,7 +83,7 @@ DeepSeek 係**按用量付費**，需預先充值少量金額：
 建議用以下任一方式：
 
 1. **課堂當日直接貼入 Cursor**（最簡單）
-2. 存入 `config/.env`（本 project 已 gitignore，唔会上傳）：
+2. 存入 `config/.env`（本 project 已 gitignore，不會上傳）：
 
 ```bash
 cp config/.env.example config/.env
@@ -100,16 +100,16 @@ cp config/.env.example config/.env
 A：用個人 Gmail 申請，或向 IT 申請開通；課堂可暫用 DeepSeek 做全部活動。
 
 **Q：DeepSeek 要 VPN 嗎？**  
-A：香港一般**唔使 VPN**，但校園防火牆可能封鎖；課前在家測試一次。
+A：香港一般**不必 VPN**，但校園防火牆可能封鎖；課前在家測試一次。
 
-**Q：我淨係申請到 Gemini，夠唔夠？**  
+**Q：我只申請到 Gemini，夠不夠？**  
 A：夠完成三個活動。活動二若 Drive MCP 未設定，講者會用備用方案或協助 OAuth。
 
-**Q：API Key 同 ChatGPT Plus 有咩分別？**  
-A：完全唔同。本課程用 **Gemini / DeepSeek 開發者 API**，按用量計費或有免費額度；唔需要 ChatGPT 訂閱。
+**Q：API Key 與 ChatGPT Plus 有什麼分別？**  
+A：完全不同。本課程用 **Gemini / DeepSeek 開發者 API**，按用量計費或有免費額度；不需要 ChatGPT 訂閱。
 
-**Q：課堂可唔可以共用學校 Key？**  
-A：可以作後備，但**強烈建議每人用自己 Key**，課後繼續練習。共用 Key 有 quota 同私隱風險。
+**Q：課堂可不可以共用學校 Key？**  
+A：可以作後備，但**強烈建議每人用自己 Key**，課後繼續練習。共用 Key 有 quota 與私隱風險。
 
 ---
 
@@ -123,8 +123,8 @@ A：可以作後備，但**強烈建議每人用自己 Key**，課後繼續練�
 - [ ] 已跟 [`06-google-drive-mcp-setup.md`](06-google-drive-mcp-setup.md) 完成 OAuth + 上傳 samples 到 `CHW_Training_垃圾崗`
 - [ ] 已安裝 Cursor：https://cursor.com
 - [ ] 已下載培訓 project
-- [ ] 跟 [`01-cursor-setup-guide.md`](01-cursor-setup-guide.md) 完成設定
-- [ ] Agent 測試句收到廣東話回覆
+- [ ] 已跟 [`01-cursor-setup-guide.md`](01-cursor-setup-guide.md) 完成設定
+- [ ] Agent 測試句收到繁體中文書面語回覆
 
 ---
 
