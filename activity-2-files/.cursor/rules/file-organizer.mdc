@@ -6,7 +6,7 @@ alwaysApply: false
 
 # File Organizer Rules
 
-When organizing `activity-2-files/inbox/`:
+When organizing `inbox/`:
 
 1. **Never classify by file extension only**
 2. **Read file content** before choosing a folder

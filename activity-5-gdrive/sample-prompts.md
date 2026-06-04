@@ -6,7 +6,7 @@
 我 Google Drive 有個 folder 叫「CHW_Training_垃圾崗」，裡面是學生交的功課但檔名很亂。
 
 請用 Google Drive MCP：
-1. 讀取 @activity-2-gdrive/rename_rules.example.json 的規則
+1. 讀取 @activity-5-gdrive/rename_rules.example.json 的規則
 2. listFolder 列出「CHW_Training_垃圾崗」裡面所有檔案
 3. 若未有「CHW_Training_已整理」folder，用 createFolder 建立
 4. 在「CHW_Training_已整理」裡面建立「視覺藝術」子 folder
@@ -20,7 +20,7 @@
 
 ```
 幫我整理 Google Drive「CHW_Training_垃圾崗」裡面的亂碼功課。
-跟 @activity-2-gdrive/rename_rules.example.json 改名，搬去「CHW_Training_已整理/視覺藝術/」。
+跟 @activity-5-gdrive/rename_rules.example.json 改名，搬去「CHW_Training_已整理/視覺藝術/」。
 用 Google Drive MCP，逐 step 等我 Approve。
 ```
 

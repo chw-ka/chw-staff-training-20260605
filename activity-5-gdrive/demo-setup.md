@@ -38,4 +38,4 @@ Cursor → Settings → MCP → `google-drive` 綠色 Connected
 
 ## 全場 OAuth 失敗
 
-切換備用：[`activity-2-watchdog/`](../activity-2-watchdog/) 本地 Watchdog（見 trainer/troubleshooting.md）
+切換備用：演示 [`activity-2-files/`](../activity-2-files/) 本機整理（見 trainer/troubleshooting.md）

@@ -52,19 +52,17 @@ chw-staff-training-20260605/
 │   ├── scripts/transcribe.py     ← Whisper 轉寫
 │   └── .cursor/skills/meeting-minutes/SKILL.md
 │
-├── activity-2-files/             ← 活動二：先傾後做、讀內容分類（inbox ~100 檔）
+├── activity-2-files/             ← 活動二：Open Folder 即用（inbox ~100 檔）
 │   ├── inbox/
 │   ├── sorted/（教學、行政、ICT…）
+│   ├── handouts/（prompt-cheatsheet、cursor-setup-brief）
 │   ├── .cursor/skills/file-organizer/
-│   ├── my_organization_profile.example.md
-│   └── sample-prompts.md
+│   └── my_organization_profile.example.md
 │
-├── activity-2-gdrive/            ← Google Drive 整理（課後自學）
+├── activity-5-gdrive/            ← Google Drive 整理（課後自學）
 │   ├── README.md
 │   ├── sample-prompts.md
 │   └── samples/
-│
-├── activity-2-watchdog/          ← 舊備用（可忽略）
 │
 ├── activity-3-marp/              ← 活動三：MARP 直出 PPT
 │   ├── marp-syntax-reference.md

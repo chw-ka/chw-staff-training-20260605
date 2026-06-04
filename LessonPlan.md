@@ -78,7 +78,7 @@
 | 即場 troubleshooting | [`trainer/troubleshooting.md`](trainer/troubleshooting.md) |
 | 活動一：逐字稿 + 範本 + SKILL | [`activity-1-minutes/`](activity-1-minutes/) |
 | 活動二：本機文件整理 | [`activity-2-files/`](activity-2-files/) |
-| Google Drive 整理（課後自學） | [`activity-2-gdrive/`](activity-2-gdrive/) |
+| Google Drive 整理（課後自學） | [`activity-5-gdrive/`](activity-5-gdrive/) |
 | 活動三：MARP 簡報模板 | [`activity-3-marp/`](activity-3-marp/) |
 | 活動四：靜態網站（HTML/CSS/JS） | [`activity-4-web/`](activity-4-web/) |
 | API Key 範本（講者填寫） | [`config/.env.example`](config/.env.example) |

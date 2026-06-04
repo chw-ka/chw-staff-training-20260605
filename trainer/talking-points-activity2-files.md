@@ -37,7 +37,7 @@
 
 | 階段 | 時間 | 學員做咩 | 講者強調 |
 |------|------|----------|----------|
-| **A 傾談** | 3–5 min | 貼 `sample-prompts.md` 階段 A | **唔搬檔**，只傾 |
+| **A 傾談** | 3–5 min | 貼 `handouts/prompt-cheatsheet.md` 階段 A | **唔搬檔**，只傾 |
 | **B 定規則** | 3–5 min | 貼階段 B，產生 `my_organization_profile.md` | 確認規則先 |
 | **C 執行** | 10–12 min | 貼**一句**階段 C | 逐步 **Approve**，睇 `sorted/` 郁 |
 

@@ -98,7 +98,7 @@ activity-1-minutes/output/transcript-from-audio.txt。
 > Open Folder → **`activity-2-files`**（內附 SKILL、RULES）。  
 > `inbox/` 約 100 個示範下載檔；**按內容分類**，唔按副檔名。
 
-### 三階段（詳見 [`activity-2-files/sample-prompts.md`](../activity-2-files/sample-prompts.md)）
+### 三階段（詳見 [`activity-2-files/handouts/prompt-cheatsheet.md`](../activity-2-files/handouts/prompt-cheatsheet.md)）
 
 **A 傾談（唔搬檔）**
 ```

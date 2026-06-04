@@ -110,7 +110,7 @@ npx -y @piotr-agier/google-drive-mcp auth
 
 1. 開 https://drive.google.com
 2. 新建 folder：**CHW_Training_垃圾崗**
-3. 上傳 [`activity-2-gdrive/samples/`](../activity-2-gdrive/samples/) 內 4 個亂碼檔
+3. 上傳 [`activity-5-gdrive/samples/`](../activity-5-gdrive/samples/) 內 4 個亂碼檔
 
 ---
 
@@ -148,4 +148,4 @@ Agent（`Cmd/Ctrl + I`）輸入：
 
 ## 下一步
 
-→ 課堂跟 [`activity-2-gdrive/sample-prompts.md`](../activity-2-gdrive/sample-prompts.md) 執行【雲端神蹟】
+→ 課堂跟 [`activity-5-gdrive/sample-prompts.md`](../activity-5-gdrive/sample-prompts.md) 執行【雲端神蹟】

@@ -61,29 +61,17 @@
 
 | 症狀 | 解決方法 |
 |------|----------|
-| MCP google-drive 紅色 | 跑 `activity-2-gdrive/setup-auth.sh`；Reload Cursor |
+| MCP google-drive 紅色 | 跑 `activity-5-gdrive/setup-auth.sh`；Reload Cursor |
 | `redirect_uri_mismatch` | OAuth client 必須是 **Desktop app** |
 | Access blocked | OAuth consent 加 Test user |
 | listFolder 找不到 folder | folder 名：`CHW_Training_垃圾崗` |
 | Agent 不用 MCP | Prompt 寫明「用 Google Drive MCP」 |
 | 用哪個 model？ | **Auto** |
-| **全場 OAuth 失敗** | 改用下方 Watchdog 備用 |
-
-### 備用：本地 Watchdog
-
-```bash
-cd activity-2-watchdog && bash setup.sh && source .venv/bin/activate
-python3 homework_watcher.py
-```
+| **全場 OAuth 失敗** | 改演示 [`activity-2-files/`](../activity-2-files/) 本機整理，或預錄片段 |
 
 ---
 
-## 活動二備用：Watchdog
-
-| 症狀 | 解決方法 |
-|------|----------|
-| `ModuleNotFoundError: watchdog` | `bash setup.sh` |
-| 腳本不觸發 | inbox 要新檔 |
+## 活動二（本機 files）
 
 ---
 

@@ -8,7 +8,7 @@
 
 **動作：**
 1. 展示垃圾崗 4 個亂碼檔（10 秒）
-2. 貼 `activity-2-gdrive/sample-prompts.md` 主推 Prompt
+2. 貼 `activity-5-gdrive/sample-prompts.md` 主推 Prompt
 3. **慢動作** Approve：`listFolder` → `createFolder` → `renameItem` → `moveItem`
 4. 開 `CHW_Training_已整理/視覺藝術/` 展示成果
 
@@ -17,7 +17,4 @@
 
 **全班練習：** 跟著 Approve 完整整理（約 8 min）
 
-**備用（OAuth 全掛）：**
-```bash
-cd activity-2-watchdog && bash setup.sh && source .venv/bin/activate && python3 homework_watcher.py
-```
+**備用（OAuth 全掛）：** 改演示 [`activity-2-files/`](../activity-2-files/) 階段 C，或播放預錄片段。

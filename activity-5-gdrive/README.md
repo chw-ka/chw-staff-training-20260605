@@ -57,4 +57,4 @@ My Drive/
 
 ## 備用方案
 
-若 OAuth / MCP 連不到：改用 [`../activity-2-watchdog/`](../activity-2-watchdog/) 本地 Watchdog demo（講者預跑 `setup.sh`）。
+若 OAuth / MCP 連不到：改演示 [`../activity-2-files/`](../activity-2-files/) 本機整理，或預錄螢幕片段。

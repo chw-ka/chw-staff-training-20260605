@@ -7,8 +7,8 @@
 ## 你要準備
 
 1. [`06-google-drive-mcp-setup.md`](06-google-drive-mcp-setup.md) — OAuth 設定
-2. [`activity-2-gdrive/README.md`](../activity-2-gdrive/README.md) — 活動說明
-3. [`activity-2-gdrive/sample-prompts.md`](../activity-2-gdrive/sample-prompts.md) — Prompt
+2. [`activity-5-gdrive/README.md`](../activity-5-gdrive/README.md) — 活動說明
+3. [`activity-5-gdrive/sample-prompts.md`](../activity-5-gdrive/sample-prompts.md) — Prompt
 
 ---
 
