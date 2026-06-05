@@ -1,6 +1,8 @@
 .env
 config/.env
 config/gcp-oauth.keys.json
+config/gcp-service-account.json
+config/staff-training-*.json
 .DS_Store
 activity-2-watchdog/inbox/
 activity-2-watchdog/sorted/

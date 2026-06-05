@@ -15,16 +15,19 @@ chw-staff-training-20260605/
 ├── LessonPlan.md                 ← 90 分鐘課程編排表（總覽）
 ├── README.md                     ← 你正在看的這份文件
 │
-├── handouts/                     ← 學員講義（課堂派發 / 投影用）
-│   ├── 01-cursor-setup-guide.md  ← Cursor 快速開始（Auto，唔使填 Key）
-│   ├── 02-prompt-cheatsheet.md   ← 三個活動的 Prompt 懶人包
-│   ├── 03-faq-hk-guide.md        ← 課後 FAQ
-│   ├── 04-filesystem-mcp-guide.md ← Filesystem MCP 試玩
-│   ├── 05-api-key-application-guide.md ← API Key 申請（課後可選）
-│   ├── 06-google-drive-mcp-setup.md ← Drive MCP（課後自學）
-│   ├── 09-google-drive-self-study.md ← 課後自學指引
-│   ├── 07-static-site-publish.md ← 活動三發佈（teacher.chw.edu.hk）
-│   └── 08-appendix-安裝清單.md   ← 附錄：Cursor / Demo Login / Python
+├── handouts/                     ← 學員講義（閱讀次序見 handouts/README.md）
+│   ├── README.md                 ← 課前／課中／課後派發次序（必讀索引）
+│   ├── 00-core-concepts-glossary.md ← Workflow、SKILL、MCP、排版文字（.md）速查
+│   ├── 08-appendix-安裝清單.md   ← 課前＋課堂 10–20 min 跟做
+│   ├── 01-cursor-setup-guide.md  ← Cursor 快速開始（Auto）
+│   ├── 02-prompt-cheatsheet.md   ← 三活動 Prompt 懶人包（課堂核心）
+│   ├── 07-static-site-publish.md ← 活動三上線（可課後）
+│   ├── 03-faq-hk-guide.md        ← 課末派發 FAQ
+│   ├── 05-api-key-application-guide.md ← API Key（課後可選）
+│   ├── 04-filesystem-mcp-guide.md ← Filesystem MCP 試玩（課後）
+│   ├── 06-google-drive-mcp-setup.md ← Drive OAuth（課後）
+│   └── 09-google-drive-self-study.md ← Drive 整理自學（課後）
+│   └── docx/                     ← 上述講義 Word 列印版（build_handout_docx.py）
 │
 ├── .cursor/
 │   ├── rules/                    ← Project AI 規則（non-dev 語氣等）

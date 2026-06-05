@@ -55,14 +55,16 @@
 
 | 板塊 | 檔案 |
 |------|------|
-| **API Key 申請（課前必做）** | [`handouts/05-api-key-application-guide.md`](handouts/05-api-key-application-guide.md) |
-| 駁通水喉（Cursor 快速開始） | [`handouts/01-cursor-setup-guide.md`](handouts/01-cursor-setup-guide.md) + [`08-appendix-安裝清單.md`](handouts/08-appendix-安裝清單.md) |
-| Prompt 懶人包 | [`handouts/02-prompt-cheatsheet.md`](handouts/02-prompt-cheatsheet.md) |
+| **閱讀次序總覽** | [`handouts/README.md`](handouts/README.md) |
+| **核心概念速查（Workflow / SKILL / MCP / .md）** | [`handouts/00-core-concepts-glossary.md`](handouts/00-core-concepts-glossary.md) |
+| **附錄：安裝清單（課前＋課堂必做）** | [`handouts/08-appendix-安裝清單.md`](handouts/08-appendix-安裝清單.md) |
+| 駁通水喉（Cursor 快速開始） | [`handouts/01-cursor-setup-guide.md`](handouts/01-cursor-setup-guide.md) |
+| Prompt 懶人包（課堂核心） | [`handouts/02-prompt-cheatsheet.md`](handouts/02-prompt-cheatsheet.md) |
+| 靜態網站發佈（活動三；可課堂口述） | [`handouts/07-static-site-publish.md`](handouts/07-static-site-publish.md) |
 | 課後 FAQ 與香港自救 | [`handouts/03-faq-hk-guide.md`](handouts/03-faq-hk-guide.md) |
-| Filesystem MCP 試玩 | [`handouts/04-filesystem-mcp-guide.md`](handouts/04-filesystem-mcp-guide.md) |
+| API Key 申請（課後可選） | [`handouts/05-api-key-application-guide.md`](handouts/05-api-key-application-guide.md) |
+| Filesystem MCP 試玩（課後） | [`handouts/04-filesystem-mcp-guide.md`](handouts/04-filesystem-mcp-guide.md) |
 | Google Drive MCP 設定（課後自學） | [`handouts/06-google-drive-mcp-setup.md`](handouts/06-google-drive-mcp-setup.md) + [`09-google-drive-self-study.md`](handouts/09-google-drive-self-study.md) |
-| 靜態網站發佈（活動三上線） | [`handouts/07-static-site-publish.md`](handouts/07-static-site-publish.md) |
-| **附錄：安裝清單（Cursor / Demo Login / Python）** | [`handouts/08-appendix-安裝清單.md`](handouts/08-appendix-安裝清單.md) |
 
 ---
 
@@ -86,12 +88,12 @@
 
 ### 講者課前必做
 
-1. 確認學員已完成 Google Drive MCP 設定（[`handouts/06-google-drive-mcp-setup.md`](handouts/06-google-drive-mcp-setup.md)）
-2. 確認學員已完成 Cursor 安裝及 Demo Login（API Key 課後可選，見 05 指南）
-2. 複製 `config/.env.example` → `config/.env`，填入講者自己的 Key 作 demo 用
-3. 預跑 [`activity-3-web/starter/index.html`](activity-3-web/starter/index.html) 確認瀏覽器可開
-4. 預跑 [`trainer/demo-script.md`](trainer/demo-script.md) 全流程
-5. 派發課前電郵（見 checklist 範本）
+1. 確認學員已完成 Cursor 安裝及 Demo Login（見 [`08-appendix-安裝清單.md`](handouts/08-appendix-安裝清單.md)；API Key 課後可選，見 05）
+2. （可選）講者自己完成 Google Drive MCP，供課後 demo（[`06`](handouts/06-google-drive-mcp-setup.md) + [`09`](handouts/09-google-drive-self-study.md)）
+3. 複製 `config/.env.example` → `config/.env`，填入講者自己的 Key 作 demo 用
+4. 預跑 [`activity-3-web/starter/index.html`](activity-3-web/starter/index.html) 確認瀏覽器可開
+5. 預跑 [`trainer/demo-script.md`](trainer/demo-script.md) 全流程
+6. 派發課前電郵（見 checklist 範本）
 
 
 

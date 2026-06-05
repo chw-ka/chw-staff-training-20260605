@@ -1,32 +1,32 @@
-# 課後 FAQ — Gemini / DeepSeek 使用指南（課後可選）
+# 課後 FAQ — Gemini／DeepSeek 使用指南（課後可選）
 
-> **課堂唔使做以下設定。** Agent 用 **Auto** 即可。  
+> **課堂無需進行以下設定。** Agent 使用 **Auto** 即可。  
 > 本 FAQ 供離開 Demo 帳號後、自備 API Key 時參考。
 
 ---
 
 ## 關於 API Key
 
-**Q：課堂用的 Key 課後還能用嗎？**  
-A：如果你用**自己申請**的 Key，當然可以。請勿將 Key 上傳 GitHub 或分享給他人。
+**問：課堂使用的 Key 課後是否仍可使用？**  
+答：若為**您自行申請**的 Key，當然可以。請勿將 Key 上傳至 GitHub 或分享予他人。
 
-**Q：我不記得申請步驟？**  
-A：請重閱 [`05-api-key-application-guide.md`](05-api-key-application-guide.md)。
+**問：不記得申請步驟？**  
+答：請重閱 [`05-api-key-application-guide.md`](05-api-key-application-guide.md)。
 
-**Q：一定要兩個 Key 都有？**  
-A：不一定。**DeepSeek** 可完成活動一、二、三（靜態網站）；**Gemini** 可選用於課後 MARP 插圖。課堂 Agent 用 **Auto** 即可。
+**問：是否必須同時擁有兩個 Key？**  
+答：不一定。**DeepSeek** 可完成活動一、二、三（靜態網站）；**Gemini** 可選用於課後 MARP 插圖。課堂 Agent 使用 **Auto** 即可。
 
 ---
 
-## Gemini vs DeepSeek 如何選擇？
+## Gemini 與 DeepSeek 如何選擇？
 
 | 方案 | 優點 | 缺點 | 適合 |
 |------|------|------|------|
-| **Gemini API** | 香港易申請、有免費額度、支援圖片生成 | 寫 code 偶爾不如 DeepSeek | 簡報、插圖、一般文字 |
-| **DeepSeek API** | 極平、寫 code 強、長文本穩 | 需充值人民幣 | Agent、Minutes、Python |
-| **Ollama 本地** | 數據不出校 | 需較強電腦 | 學生私隱資料 |
+| **Gemini API** | 香港易申請、有免費額度、支援圖片生成 | 撰寫程式偶爾不如 DeepSeek | 簡報、插圖、一般文字 |
+| **DeepSeek API** | 費用低、撰寫程式能力強、長文本穩定 | 需充值人民幣 | Agent、會議紀錄、Python |
+| **Ollama 本地** | 資料不出校園 | 需較強電腦配置 | 學生私隱資料 |
 
-**本課程建議組合：** DeepSeek 做日常 Agent + Gemini 做多模態。
+**本課程建議組合：** DeepSeek 作日常 Agent；Gemini 作多模態用途。
 
 ---
 
@@ -43,11 +43,11 @@ A：不一定。**DeepSeek** 可完成活動一、二、三（靜態網站）；
 1. https://platform.deepseek.com → API Keys → Create
 2. 充值少量 balance
 3. Cursor Settings → Models：
-   - **OpenAI API Key** 欄貼 DeepSeek 的 `sk-...`
+   - **OpenAI API Key** 欄貼上 DeepSeek 的 `sk-...`
    - **Override Base URL**：`https://api.deepseek.com`
    - Add model：`deepseek-v4-flash`
 
-> 這裡的「OpenAI API Key」欄只是 Cursor 接口名稱，**不代表使用 OpenAI**。
+> 此處「OpenAI API Key」欄僅為 Cursor 介面名稱，**不代表使用 OpenAI 服務**。
 
 ---
 
@@ -69,23 +69,26 @@ Add model：`deepseek-r1:8b`
 
 ## 常見問題
 
-**Q：Cursor 與 ChatGPT 有什麼分別？**  
-A：Cursor 是 IDE，Agent 可讀寫 project 檔案、跑 script。ChatGPT 主要是網頁對話。
+**問：Cursor 與 ChatGPT 有何分別？**  
+答：Cursor 為整合開發環境（IDE），Agent 可讀寫專案檔案、執行 script。ChatGPT 主要為網頁對話。
 
-**Q：MCP 是什麼？**  
-A：Model Context Protocol — 讓 AI 標準化連接本機檔案、資料庫等。見 [`04-filesystem-mcp-guide.md`](04-filesystem-mcp-guide.md)。
+**問：MCP、SKILL、Workflow、.md 是什麼？**  
+答：見 [`00-core-concepts-glossary.md`](00-core-concepts-glossary.md)。MCP 試用見 [`04-filesystem-mcp-guide.md`](04-filesystem-mcp-guide.md)。
 
-**Q：DeepSeek 402 / balance 不足？**  
-A：去 platform.deepseek.com 充值。
+**問：MCP 是什麼？（一句）**  
+答：連線服務的共通標準；課堂活動二無需啟用 MCP 即可完成本機整理。
 
-**Q：Gemini quota exceeded？**  
-A：等翌日 free tier 重置，或改用 DeepSeek。
+**問：DeepSeek 402／balance 不足？**  
+答：請至 platform.deepseek.com 充值。
 
-**Q：校園 Wi-Fi 連不到 API？**  
-A：試 hotspot；向 IT 查是否封鎖 `api.deepseek.com` / Google API；敏感工作改用 Ollama。
+**問：Gemini quota exceeded？**  
+答：等候翌日 free tier 重置，或改用 DeepSeek。
 
-**Q：MARP 如何 export PPT？（課後延伸）**  
-A：見 `activity-4-marp/` — 裝 Marp for VS Code → Export；或 `npx @marp-team/marp-cli file.md --pptx`
+**問：校園 Wi-Fi 無法連接 API？**  
+答：可嘗試 hotspot；向資訊科技組查詢是否封鎖 `api.deepseek.com`／Google API；敏感工作請改用 Ollama。
+
+**問：MARP 如何匯出 PPT？（課後延伸）**  
+答：見 `activity-4-marp/` — 安裝 Marp for VS Code → Export；或 `npx @marp-team/marp-cli file.md --pptx`
 
 ---
 
@@ -101,7 +104,13 @@ A：見 `activity-4-marp/` — 裝 Marp for VS Code → Export；或 `npx @marp-
 
 ---
 
+## 即場／常見錯誤
+
+課堂若遇阻（Allow 未彈出、Whisper 較慢、MCP 顯示紅色等）→ 講者將依 [`trainer/troubleshooting.md`](../trainer/troubleshooting.md) 處理；學員可先查閱本 FAQ 上表。
+
+---
+
 ## 聯絡
 
 課程問題：[填入講者 email]  
-IT 支援：[填入校內 IT]
+資訊科技支援：[填入校內 IT]

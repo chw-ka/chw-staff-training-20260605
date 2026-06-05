@@ -17,7 +17,7 @@
 - [ ] 統計：幾位未完成 Google OAuth
 - [ ] 準備備用：OAuth 全掛 → 本地 Watchdog
 - [ ] 準備 **Demo Login** 帳密（有效期至 **2026年7月3日**；課堂派發，勿 commit）
-- [ ] 列印/PDF：`handouts/` **08**、02、03；（06、09 課後自學）
+- [ ] 列印/PDF：`handouts/docx/CHW-Cursor-Training-Handouts-Merged.docx`（一次過；Word 內更新目錄）或分冊 `00`/`08`/`02`/`03`
 
 ## 當日（開課前 30 分鐘）
 

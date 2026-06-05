@@ -1,6 +1,6 @@
 # 開啟本活動 — 三步開始
 
-> 本資料夾可**獨立**用 Cursor 開啟，唔使開成個培訓包。
+> 本資料夾可**獨立**以 Cursor 開啟，無需開啟整個培訓包。
 
 ---
 
@@ -8,29 +8,29 @@
 
 1. 安裝 [Cursor](https://cursor.com)
 2. **File → Open Folder**
-3. 選**本資料夾**（`activity-2-files`）
+3. 選擇**本資料夾**（`activity-2-files`）
 
-左邊應見到：`inbox/`、`sorted/`、`handouts/`、`.cursor/` 等。
+左側應可見：`inbox/`、`sorted/`、`handouts/`、`.cursor/` 等。
 
 ---
 
-## Step 2：開 Agent
+## Step 2：開啟 Agent
 
-1. `Ctrl + I`（Mac：`Cmd + I`）
+1. 按 `Ctrl + I`（Mac：`Cmd + I`）
 2. Model 選 **Auto**
-3. 唔使填 API Key、唔使 MCP
+3. 無需填寫 API Key、無需 MCP
 
 ---
 
-## Step 3：跟 Prompt 做
+## Step 3：依 Prompt 操作
 
-打開 [`prompt-cheatsheet.md`](prompt-cheatsheet.md)：
+請開啟 [`prompt-cheatsheet.md`](prompt-cheatsheet.md)：
 
-- **A** 傾談（唔搬檔）
-- **B** 定規則
-- **C** 一句執行
+- **A** 商討（不移動檔案）
+- **B** 訂立規則
+- **C** 一次執行
 
-時間唔夠：確認 `my_organization_profile.example.md` 後，直接做 **C**。
+時間不足時：確認 `my_organization_profile.example.md` 後，可直接進行 **C**。
 
 ---
 
@@ -38,6 +38,6 @@
 
 | 問題 | 做法 |
 |------|------|
-| 會改我真正 Downloads 嗎？ | **唔會**，只動本資料夾內 `inbox/` → `sorted/` |
-| 一定要三階段嗎？ | 建議跟足；捷徑可跳 A，用 `.example` 做 C |
+| 會修改我真正的 Downloads 嗎？ | **不會**，僅處理本資料夾內 `inbox/` → `sorted/` |
+| 是否必須三階段？ | 建議依序完成；捷徑可跳過 A，以 `.example` 進行 C |
 | Google Drive 整理 | 見 [`google-drive-self-study.md`](google-drive-self-study.md)（課後） |
