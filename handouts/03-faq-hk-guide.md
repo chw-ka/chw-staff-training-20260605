@@ -14,7 +14,7 @@ A：如果你用**自己申請**的 Key，當然可以。請勿將 Key 上傳 Gi
 A：請重閱 [`05-api-key-application-guide.md`](05-api-key-application-guide.md)。
 
 **Q：一定要兩個 Key 都有？**  
-A：不一定。**DeepSeek** 可完成活動一、二；**Gemini** 擅長活動三插圖。建議兩個都申請。
+A：不一定。**DeepSeek** 可完成活動一、二、三（靜態網站）；**Gemini** 可選用於課後 MARP 插圖。課堂 Agent 用 **Auto** 即可。
 
 ---
 
@@ -84,8 +84,8 @@ A：等翌日 free tier 重置，或改用 DeepSeek。
 **Q：校園 Wi-Fi 連不到 API？**  
 A：試 hotspot；向 IT 查是否封鎖 `api.deepseek.com` / Google API；敏感工作改用 Ollama。
 
-**Q：MARP 如何 export PPT？**  
-A：裝 Marp for VS Code → Export；或 `npx @marp-team/marp-cli file.md --pptx`
+**Q：MARP 如何 export PPT？（課後延伸）**  
+A：見 `activity-4-marp/` — 裝 Marp for VS Code → Export；或 `npx @marp-team/marp-cli file.md --pptx`
 
 ---
 

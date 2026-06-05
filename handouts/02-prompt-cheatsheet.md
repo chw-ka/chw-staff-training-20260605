@@ -131,30 +131,43 @@ activity-1-minutes/output/transcript-from-audio.txt。
 
 ---
 
-## 活動三：會議紀錄 → 早會簡報（60–85 min）
+## 活動三：生成靜態小工具（60–85 min）
 
 ### 主推 Prompt
 
 ```
-校長要我針對今日科組會議，準備聽日早會簡報。
+請幫我用純 HTML + CSS + Vanilla JS 寫一個教學用小網站，功能是「功課命名器」。
 
-請讀：
-- @activity-1-minutes/output/會議紀錄_視藝科組_20260528.docx（或第二步嘅 會議紀錄_草稿.docx）
-- @activity-3-marp/template-with-footer.md（簡報格式同校徽）
-- @activity-3-marp/marp-syntax-reference.md（排版參考）
-
-幫我寫 6–8 頁簡報，包括：封面、會議概要、三個決議重點、跟進時間表、總結。
-圖片位置可以先留空，我之後再補。
-儲存為 activity-3-marp/output/morning-briefing.md
+要求：
+1. 輸出到 activity-3-web/output/ 下面，包含：index.html、styles.css、app.js
+2. UI 要現代、清晰、mobile responsive（兩欄 → 手機一欄）
+3. 表單欄位：學生姓名、科目、原檔名、前綴（預設【功課】）
+4. 按「生成」後顯示建議檔名：{prefix}_{student}_{subject}.{ext}
+5. 提供「複製到剪貼簿」按鈕（成功/失敗提示）
+6. 所有文字用香港繁中書面語
+7. 完成後話我點樣用瀏覽器打開 index.html 預覽
 ```
 
 ### 精簡版（時間唔夠）
 
 ```
-請根據 @activity-3-marp/sample-minutes-for-slides.md，
-用 @activity-3-marp/template-with-footer.md 嘅格式，
-幫我寫 5 頁早會簡報。圖片位置留空就得。
+請參考 @activity-3-web/starter/ 的功課命名器，
+幫我生成一個改咗色系同標題的版本，輸出到 activity-3-web/output/。
+完成後話我點 preview。
 ```
+
+上線步驟見 [`07-static-site-publish.md`](07-static-site-publish.md)。
+
+---
+
+## 課後延伸：MARP 簡報（可選）
+
+```
+請讀 @activity-4-marp/template-tech-with-footer.md 同 @activity-4-marp/sample-minutes-for-slides.md，
+幫我寫 5–6 頁早會簡報，儲存為 activity-4-marp/output/morning-briefing.md。圖片位置留空。
+```
+
+詳見 [`activity-4-marp/`](../activity-4-marp/)。
 
 ---
 
@@ -174,26 +187,8 @@ activity-1-minutes/output/transcript-from-audio.txt。
 
 1. 用自己科組會議錄音同逐字稿，重做活動一
 2. 用 `activity-2-files/` 三階段整理練習（先傾、定規則、執行）
-3. 用活動三格式，做下週早會簡報
-4. （可選）Google Drive 自學：[`09-google-drive-self-study.md`](09-google-drive-self-study.md)
+3. 用活動三 prompt，整一個教學小工具並 preview
+4. （可選）MARP 簡報：`activity-4-marp/`
+5. （可選）Google Drive 自學：[`09-google-drive-self-study.md`](09-google-drive-self-study.md)
 
 詳見 [`03-faq-hk-guide.md`](03-faq-hk-guide.md)。
-
----
-
-## 活動四：功課命名小工具（延伸，可選）
-
-```
-請幫我寫一個簡單網頁「功課命名器」：
-
-老師輸入學生姓名、科目、原檔名，
-按掣後顯示建議檔名：【功課】_學生名_科目.副檔名，
-再加一個「複製」掣方便貼去檔案總管。
-
-全部用香港繁中，介面要清晰易用。
-儲存到 activity-4-web/output/ 資料夾。
-
-完成後話我知點樣打開預覽。
-```
-
-發佈方法見 [`07-static-site-publish.md`](07-static-site-publish.md)。

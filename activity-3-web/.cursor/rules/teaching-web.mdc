@@ -1,0 +1,16 @@
+---
+description: 活動三教學網頁 — 互動頁生成與 _web 發佈
+globs: output/**,starter/**,publish.config*.json,sample-prompts.md
+alwaysApply: false
+---
+
+# Teaching Web Rules
+
+When working in `activity-3-web/`:
+
+1. **Purpose:** teaching simulations, interactive exercises, or simple games — not admin utilities
+2. **Output:** `output/index.html` + `styles.css` + `app.js` (vanilla, no build)
+3. **Paths:** relative only in HTML/CSS/JS — never root-absolute like `/styles.css`
+4. **No secrets** in client-side JS
+5. **Publish:** user says publish/上線 → follow `publish-web` SKILL; run `scripts/publish_web.py --dry-run` first, then `--yes` after confirm
+6. **Language:** 香港繁中書面語 unless subject needs English terms

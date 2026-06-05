@@ -235,7 +235,7 @@ def main() -> int:
             f"SiliconFlow chat ({sf_chat})",
             lambda: test_siliconflow_chat(sf_key, sf_chat),
         )
-        out_dir = ROOT / "activity-3-marp" / "assets"
+        out_dir = ROOT / "activity-4-marp" / "assets"
         def _sf_image_test() -> tuple[bool, str]:
             last_err = "no models tried"
             for m in sf_image_models:

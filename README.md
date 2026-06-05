@@ -23,7 +23,7 @@ chw-staff-training-20260605/
 │   ├── 05-api-key-application-guide.md ← API Key 申請（課後可選）
 │   ├── 06-google-drive-mcp-setup.md ← Drive MCP（課後自學）
 │   ├── 09-google-drive-self-study.md ← 課後自學指引
-│   ├── 07-static-site-publish.md ← 活動四發佈（teacher.chw.edu.hk）
+│   ├── 07-static-site-publish.md ← 活動三發佈（teacher.chw.edu.hk）
 │   └── 08-appendix-安裝清單.md   ← 附錄：Cursor / Demo Login / Python
 │
 ├── .cursor/
@@ -64,17 +64,17 @@ chw-staff-training-20260605/
 │   ├── sample-prompts.md
 │   └── samples/
 │
-├── activity-3-marp/              ← 活動三：MARP 直出 PPT
-│   ├── marp-syntax-reference.md
-│   ├── template-with-footer.md
-│   ├── sample-minutes-for-slides.md
-│   └── assets/README.md          ← 放置校徽 PNG
-│
-├── activity-4-web/               ← 活動四：生成 HTML+CSS+JS（webhost）
+├── activity-3-web/               ← 活動三：生成 HTML+CSS+JS（webhost）
 │   ├── README.md
 │   ├── sample-prompts.md
 │   ├── starter/                 ← 直接打開 index.html
 │   └── output/                  ← 課堂生成版本
+│
+├── activity-4-marp/              ← 課後延伸：MARP 簡報（唔喺 90 分鐘內）
+│   ├── marp-syntax-reference.md
+│   ├── template-tech-with-footer.md
+│   ├── sample-minutes-for-slides.md
+│   └── assets/README.md
 │
 └── config/
     ├── .env.example              ← API Key + Model 選項說明（同 .env.sample）
@@ -92,7 +92,7 @@ chw-staff-training-20260605/
 1. 閱讀 `trainer/pre-class-checklist.md`，逐項打勾。
 2. 確認學員已完成 Cursor 安裝及 Demo Login（Google Drive OAuth **唔使**，課後見 09）
 3. 自己申請 Gemini + DeepSeek Key，填入 `config/.env` 作 demo（**可選**；課堂學員用 Auto）。
-4. 將校徽 PNG 放入 `activity-3-marp/assets/school-logo.png`。
+4. 預跑 `activity-3-web/starter/index.html` 確認瀏覽器可開。
 5. 在講者電腦預跑一次 `trainer/demo-script.md` 全流程（**含活動一 Whisper Phase 1**）。
 
 ### 課堂當日
@@ -128,7 +128,7 @@ chw-staff-training-20260605/
 | Google 帳號 | 課後 Drive 自學（可選） | 見 `09-google-drive-self-study.md` |
 | Python 3.10+ | 活動一 Whisper 轉寫；備用 Watchdog | 課堂 Phase 1 需用；見 `activity-1-minutes/scripts/` |
 | ffmpeg | 活動一讀取 .m4a | 與 Whisper 一併使用 |
-| VS Code Marp 擴充（可選） | 預覽 MARP 簡報 | Cursor 內裝 Marp for VS Code |
+| VS Code Marp 擴充（可選） | 課後 MARP 延伸 | Cursor 內裝 Marp for VS Code；見 `activity-4-marp/` |
 
 ---
 

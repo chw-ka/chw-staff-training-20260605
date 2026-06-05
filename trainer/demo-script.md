@@ -90,32 +90,29 @@
 
 ## 活動三 Demo（01:00–01:25）
 
-**[開啟 activity-3-marp/]**
+**[開啟 activity-3-web/starter/index.html]**
 
 **話術：**
-> 「校長說：明天早會你要匯報。傳統開 PowerPoint 起碼一個鐘。
-> MARP 用 Markdown 寫 slide；Agent 讀剛才的 minutes，直接出簡報。」
+> 「有時唔係要簡報，而係要一個**小工具** — 例如功課命名器，同事用瀏覽器開就得。
+> Agent 幫你寫 HTML + CSS + JS，本機 preview；課後仲可以放上 teacher.chw.edu.hk。」
 
 **動作：**
-1. 快速展示 `marp-syntax-reference.md` 的 `bg left` 語法（2 min）
-2. 展示 `template-with-footer.md` footer 效果（1 min）
-3. Agent 貼活動三 Prompt
-4. Allow 生成 `activity-3-marp/output/morning-briefing.md`
-5. 開 Marp Preview 或 export PDF
+1. 瀏覽器展示 `starter/index.html`（1 min）
+2. Agent 貼活動三 Prompt（02 handout 或 `sample-prompts.md`）
+3. Allow 生成到 `activity-3-web/output/`
+4. 雙擊 `output/index.html` preview（Wow 點）
+5. （可選 30 秒）口述 `_web` 路徑 — 詳見 `07-static-site-publish.md`
 
-**若 Gemini 圖片失敗：**
-> 「圖片生成需要額外 API；今日重點是 MARP workflow，placeholder 也可以。」
-
-**全班練習：** 生成簡報或改 template（約 8 min）。
+**全班練習：** 改 prompt 或改色系（約 5–8 min）。
 
 ---
 
 ## 總結（01:25–01:30）
 
 **話術：**
-> 「今日三個 activity：會議 → 紀錄 → 簡報；Google Drive 垃圾崗 → 雲端自動整理。
+> 「今日三個 activity：會議 → 紀錄；本機執檔；**靜態小工具 preview**。
 > 處理學生私隱時，請考慮用 Ollama 本地模型 — FAQ 有教。
-> **課後**如用自己 Key，詳見 handouts/03-faq-hk-guide.md 及 05 申請指南。
+> **課後** MARP 簡報見 activity-4-marp；Drive 整理見 09。
 > 多謝大家，祝各位成為工作流總設計師！」
 
 **動作：** 派發/分享 handouts 連結，Q&A（可 overrun 1–2 min）。
@@ -133,7 +130,7 @@
 | 活動一 Whisper | `large-v3`（`scripts/transcribe.py`） |
 | 活動一短 clip | `activity-1-minutes/samples/demo-short-clip.m4a` |
 | 活動一詳細腳本 | `trainer/activity-1-demo-script.md` |
-| 校徽 | activity-3-marp/assets/school-logo.png |
+| 活動三 web starter | `activity-3-web/starter/index.html` |
 | 備用 output | activity-1-minutes/expected-output-sample.md |
 | 活動二示範檔 | `activity-2-files/inbox/` |
 | 課後 Drive 自學 | `09-google-drive-self-study.md` |

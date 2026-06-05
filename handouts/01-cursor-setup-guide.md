@@ -20,7 +20,7 @@
 | 活動一 Phase 1 | 寫 Python code、跑 terminal | **Whisper**（本機 script，唔經 AI 連線） |
 | 活動一 Phase 2–3 | 讀檔、跟 SKILL 寫紀錄 | Cursor Agent（**Auto**） |
 | 活動二 | 本機整理 `activity-2-files/` | Cursor Agent（**Auto**） |
-| 活動三 | MARP 簡報 | Cursor Agent（**Auto**） |
+| 活動三 | 靜態網站小工具 | Cursor Agent（**Auto**） |
 
 > ⚠️ **請勿**將 API Key 貼入 Agent 對話。
 

@@ -1,6 +1,6 @@
-# 靜態網站發佈指南 — 活動四【teacher.chw.edu.hk】
+# 靜態網站發佈指南 — 活動三【teacher.chw.edu.hk】
 
-> 配合「活動四：生成 HTML + CSS + JS」。  
+> 配合「活動三：生成 HTML + CSS + JS」。  
 > 學校已提供 **teacher.chw.edu.hk**：你把靜態檔放入 NAS 上的 `_web` folder，網站就會對外提供 HTTPS 網址。
 
 ---
@@ -37,7 +37,7 @@ NAS（//10.10.0.13/staff/KA/_web/）
 - 學校 NAS 存取權（`//10.10.0.13/staff`）
 - 你的**教師代碼 folder**（例如 `KA`、`LC` — 即 staff share 裡面屬於你的 folder）
 - 一個叫 `_web` 的子 folder（網站根目錄）
-- 活動四生成的靜態檔（`index.html` 等）
+- 活動三生成的靜態檔（`index.html` 等）
 
 ---
 
@@ -121,12 +121,21 @@ _web/
 
 ---
 
-## 活動四完整流程（課後練習）
+## 活動三完整流程（課堂 + 上線）
 
-1. 跟 [`activity-4-web/sample-prompts.md`](../activity-4-web/sample-prompts.md) 用 Agent 生成網站到 `activity-4-web/output/`
+1. 跟 [`activity-3-web/sample-prompts.md`](../activity-3-web/sample-prompts.md) 用 Agent 生成網站到 `activity-3-web/output/`
 2. 本地打開 `output/index.html` 預覽
-3. 將 `output/` 裡面所有檔案複製到你的 `_web`
+3. **上線（二選一）：**
+   - **Agent 一句話：** 設定好 `activity-3-web/publish.config.json` 後，在 Agent 講 **「publish」** 或 **「上線」**
+   - **手動：** 將 `output/` 裡面所有檔案複製到你的 `_web`
 4. 用公開網址驗證
+
+### 首次設定 publish（課前或課後做一次）
+
+1. 複製 `activity-3-web/publish.config.example.json` → `activity-3-web/publish.config.json`
+2. 填入 `teacher_code`（例如 `KA`）
+3. 若已 map NAS 為 `P:\`，可改填 `publish_target_override`：`P:\\KA\\_web`
+4. 測試：`python scripts/publish_web.py --dry-run`
 
 ---
 

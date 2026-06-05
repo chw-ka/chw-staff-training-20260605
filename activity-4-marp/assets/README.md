@@ -34,5 +34,5 @@ Agent 可將 Gemini 生成的插圖存為：
 Agent 生成的簡報建議存放於：
 
 ```
-activity-3-marp/output/morning-briefing.md
+activity-4-marp/output/morning-briefing.md
 ```

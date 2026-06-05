@@ -75,7 +75,7 @@
 
 1. **從 Chatbot 到 Agent** — 舊：一問一答；新：多步驟、自動執行
 2. **Agentic Workflow** — 呼應上面：老師做「工作流設計師」
-3. **今日三個 Activity** — Minutes（API + Skill）→ Drive 整理（雲端 MCP）→ MARP（多模態）
+3. **今日三個 Activity** — Minutes（Workflow + Skill）→ 本機執檔 → **靜態網站**（瀏覽器 preview）
 
 **節奏提示：** 先講「點解 Cursor」→ **指認介面** → 再講「AI 點變」→ 最後預覽三個 Activity → 下一節跟 **附錄** 做環境準備。
 
@@ -164,15 +164,97 @@
 
 ---
 
-## 60–85 min｜活動三：MARP
+## 60–85 min｜活動三：靜態網站（HTML/CSS/JS）
+
+> 完整話術：[`talking-points-activity3-web.md`](talking-points-activity3-web.md)
+
+**一句話：** Agent 生成小工具 → 本機打開 `output/index.html` preview → 課後可複製 NAS `_web` 上線（07 講義）。
 
 - Model：**Auto**
-- 讀活動一 minutes → 出簡報
+- 先展示 `starter/index.html`，再 live 生成 `output/`
+- **唔喺課堂逐 step 教 07** — 總結可口述 30 秒；詳細課後跟講義
 
 ---
 
 ## 85–90 min｜總結
 
-- 私隱：敏感資料用 Ollama；課堂只動 project 內示範檔
-- Google Drive 整理：課後見 `09-google-drive-self-study.md`
-- 老師 = 工作流總設計師
+> 投影 [`fig-10-closing-summary.png`](infographics/fig-10-closing-summary.png)（可選）。  
+> 派發／提醒：`03-faq-hk-guide.md` · **課後延伸**（見下）。
+
+### 1. 私隱（必講，約 1 分鐘）
+
+| 要講 | 重點句 |
+|------|--------|
+| 課堂範圍 | 今日只動 **project 內示範檔**，唔改你真正 Downloads／桌面 |
+| 敏感資料 | 學生私隱、成績、評語 → **Ollama 本機** 或校內核准工具（見 `03-faq-hk-guide.md`） |
+| 公開網站 | 放入 `_web` 的檔案 = **公開**；**唔好**把 API Key 寫入 HTML/JS |
+
+**收束一句：**
+
+> 「Agent 好勁，但**批核同邊份資料可以出街**，仍然係你嘅責任。」
+
+---
+
+### 2. 活動三上線提醒（約 1 分鐘）
+
+**對照講義：** [`handouts/07-static-site-publish.md`](../handouts/07-static-site-publish.md) · 素材 [`activity-3-web/`](../activity-3-web/)
+
+**話術（建議原句）：**
+
+> 「剛才活動三已經 preview 咗小工具 — **上線**就係將 `output/` 複製去 NAS **`_web`**，同事打開 **`teacher.chw.edu.hk/{代碼}/`** 就睇到。」
+
+**三句講清原理（唔使逐 step 讀講義）：**
+
+| 概念 | 講法 |
+|------|------|
+| 唔係 Google Drive | Drive **唔會**當網站跑 HTML/JS；學校係 **NAS → 伺服器 → HTTPS 網址** |
+| 你要做咩 | 喺 NAS 自己 folder 開 **`_web`**，放入 `index.html` 等靜態檔 |
+| Wow 句 | 「**唔使申請 hosting** — 07 講義有路徑同常見問題」 |
+
+**必記三點（可快速投影 07 參考卡）：**
+
+1. 路徑：`\\10.10.0.13\staff\{代碼}\_web\`
+2. 入口：**必須有** `index.html`；CSS/圖片用**相對路徑**
+3. 新開 `_web` 可能要等 **最多 1 小時** 掃描
+
+---
+
+### 3. 課後延伸 — Google Drive 整理（約 1 分鐘）
+
+**對照講義：** [`handouts/09-google-drive-self-study.md`](../handouts/09-google-drive-self-study.md) · 設定 [`06-google-drive-mcp-setup.md`](../handouts/06-google-drive-mcp-setup.md) · 素材 [`activity-5-gdrive/`](../activity-5-gdrive/)
+
+**話術（建議原句）：**
+
+> 「課堂活動二係 **本機 inbox 執檔** — 唔使 OAuth，全班跟得上。  
+> 若你想整理 **Google Drive 垃圾崗**，呢個 **唔喺 90 分鐘內**；課後睇 **09 自學指引**。」
+
+**與活動二對照（一表講清）：**
+
+| | 課堂活動二 | 課後 09 自學 |
+|--|-----------|--------------|
+| 位置 | 本機 `activity-2-files` | **雲端** Drive |
+| 技術 | Agent + `@inbox/` | **Google Drive MCP** |
+| 課前 | 唔使 OAuth | 要跟 **06** 做 OAuth |
+| 你已學識 | 先傾 → 定規則 → Approve | **同一套 Workflow**，只係「隨意門」改連 Drive |
+
+**收束：**
+
+> 「09 寫明：**做完 OAuth → 開 `activity-5-gdrive` → 貼 sample prompt → 逐 step Approve** — 同今日一樣，你係老闘。」
+
+---
+
+### 4. 結語（約 30 秒）
+
+**建議原句照講：**
+
+> 「老師嘅價值唔再係重複性行政，而係 **工作流總設計師**。  
+> 課堂三個 Activity 係起點；**07 上線、09 整雲端、MARP 簡報（activity-4-marp）**，都係同一套 Agent + Approve，課後慢慢試。」
+
+**派發提醒：**
+
+| 講義 | 用途 |
+|------|------|
+| `02-prompt-cheatsheet.md` | 三個活動 Prompt 懶人包 |
+| `03-faq-hk-guide.md` | API Key、Ollama、常見問題 |
+| `07-static-site-publish.md` | 活動三：teacher.chw.edu.hk 上線 |
+| `09-google-drive-self-study.md` | 課後：Drive MCP 整理 |

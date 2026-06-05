@@ -75,13 +75,14 @@
 
 ---
 
-## 活動三：MARP
+## 活動三：靜態網站
 
 | 症狀 | 解決方法 |
 |------|----------|
 | 用哪個 model？ | **Auto** |
-| 圖片生成失敗 | 用 placeholder；重點教 MARP 語法 |
-| 校徽不顯示 | 確認 `assets/school-logo.png` 存在 |
+| 打開白畫面 | 確認路徑係 `output/index.html`；叫 Agent 檢查 JS 錯誤 |
+| 樣式錯亂 | 要求「相對路徑引用 CSS」；唔好用 `/styles.css` |
+| 上線 404 | 見 `07-static-site-publish.md` — 要有 `index.html`、等 NAS 掃描 |
 
 ---
 
@@ -89,7 +90,7 @@
 
 | 剩餘時間 | 建議 |
 |----------|------|
-| 少 5 分鐘 | 活動三展示 template，不 live 生圖 |
+| 少 5 分鐘 | 活動三只展示 starter + 講者 output preview |
 | 少 10 分鐘 | 活動二只整理 1 檔；或切 Watchdog 備用 |
 | 少 15 分鐘 | 活動一展示 expected output |
 | API 全場掛 | 三活動用預備 output + 講 workflow |

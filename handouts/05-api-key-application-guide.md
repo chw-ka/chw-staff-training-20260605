@@ -10,7 +10,7 @@
 
 | 平台 | 用途 | 費用 | 香港申請 |
 |------|------|------|----------|
-| **Gemini API** | 活動一/三文字、活動三 AI 插圖（多模態） | 有免費額度 | ✅ 一般可直接申請 |
+| **Gemini API** | 活動一文字（可選）、課後 MARP 插圖（可選） | 有免費額度 | ✅ 一般可直接申請 |
 | **DeepSeek API** | 活動一/二 Agent 主力（文字、寫 code） | 按用量計，極平 | ✅ 一般可直接申請 |
 
 > 兩個 Key 都申請到最順暢。若時間有限，**DeepSeek 優先**；Google Drive MCP 需額外 OAuth（見 [`06-google-drive-mcp-setup.md`](06-google-drive-mcp-setup.md)）。

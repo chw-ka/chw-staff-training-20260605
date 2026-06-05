@@ -7,7 +7,7 @@
 - [ ] 自己完成：Google Drive MCP OAuth（**課後自學用，可選**）
 - [ ] 自己 Drive 建立 `CHW_Training_垃圾崗` 並上傳 samples
 - [ ] 預跑活動二 demo（`activity-2-files/inbox/` → `sorted/`）
-- [ ] 放入校徽：`activity-3-marp/assets/school-logo.png`
+- [ ] 預跑 `activity-3-web/starter/index.html` 確認瀏覽器可開
 - [ ] 預跑完整 `trainer/demo-script.md`
 - [ ] **活動一 Whisper：** `pip install -r activity-1-minutes/scripts/requirements.txt`（首次下載 large-v3 ~3 GB）
 - [ ] 預跑 Phase 1：`python activity-1-minutes/scripts/transcribe.py`（~45 秒 clip）

@@ -1,4 +1,4 @@
-# MARP 語法速查 — 活動三
+# MARP 語法速查 — 課後延伸（activity-4-marp）
 
 ## 基本結構
 

@@ -1,6 +1,6 @@
 # 視藝科組會議 — 早會簡報素材
 
-> 活動三 Agent 讀取此檔或活動一 output，生成 MARP 簡報。
+> 課後延伸：Agent 讀取此檔或活動一 output，生成 MARP 簡報（見 activity-4-marp/）。
 
 ## 會議概要
 

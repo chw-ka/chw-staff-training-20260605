@@ -1,0 +1,8 @@
+{
+  "_comment": "複製為 publish.config.json（勿 commit）。填你的教師代碼同 NAS 路徑。",
+  "teacher_code": "KA",
+  "nas_root": "\\\\10.10.0.13\\staff",
+  "web_folder": "_web",
+  "source_dir": "output",
+  "publish_target_override": ""
+}

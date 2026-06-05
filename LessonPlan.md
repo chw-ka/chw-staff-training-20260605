@@ -3,7 +3,7 @@
 * **課程主題：** 2026年度 AI 驅動校園：從行政解放到高階自主開發
 * **對象：** 有意願深入學習 AI 應用的學校教職員（Power Users）
 * **時長：** 90 分鐘
-* **主要工具：** Cursor (Agent / Composer 模式)、MARP
+* **主要工具：** Cursor (Agent / Composer 模式)、HTML/CSS/JS（靜態網站）
 * **環境配置策略：** 課堂 10 分鐘跟 [`handouts/08-appendix-安裝清單.md`](handouts/08-appendix-安裝清單.md) 安裝 Cursor、Demo Login；Agent **Model 用 Auto**，唔使手動填 API Key。課後可選申請 Gemini / DeepSeek（見 [`05-api-key-application-guide.md`](handouts/05-api-key-application-guide.md)）。
 
 ---
@@ -40,9 +40,9 @@
 
 <br>(25") | 活動 3：<br>
 
-<br>MARP 直出 PPT | **API (多模態)**<br>
+<br>生成靜態網站 | **Vibe Coding**<br>
 
-<br>**SKILL (Marp 語法)** | **情境：** 校長要求針對剛才活動一的決議事項，明天早會向全校簡報。**SKILL 落地：** 學習 **MARP**（純文字排版簡報）語法。命令 Cursor Agent 讀取活動一的 Minutes 文本，一邊編寫簡報，一邊調用 **Gemini API** 生成符合主題的 AI 插圖。**Wow 點：** 透過 MCP 權限，Agent 自動把 AI 插圖下載到本地、精準排版，並套用含有學校校徽的 Global Footer。老師從頭到尾沒開過 PowerPoint，一份完全客製化的學校簡報已經憑空誕生。 |
+<br>**Workflow** | **情境：** 老師想整一個**教學／行政小工具**（例如功課命名器），俾同事或學生用瀏覽器開。**做法：** 跟 [`activity-3-web/sample-prompts.md`](activity-3-web/sample-prompts.md) 叫 Agent 生成 **HTML + CSS + JS** 到 `output/` → **本機打開 `index.html` 預覽**。**Wow 點：** 唔使 PowerPoint、唔使 build；課後可複製到 NAS `_web` 上線（見 [`handouts/07-static-site-publish.md`](handouts/07-static-site-publish.md)）。 |
 | 85-90 min<br>
 
 <br>(05") | **總結與反思** | **數據私隱與未來** | **安全意識：** 提醒老師，處理涉及學生私隱或學校機密文件時，未來可結合今日學到的 MCP 工作流，在校內以 **Ollama 本地部署開源模型**安全處理。**結語：** 老師的價值不再是重複性行政，而是成為「工作流的總設計師」。 |
@@ -61,7 +61,7 @@
 | 課後 FAQ 與香港自救 | [`handouts/03-faq-hk-guide.md`](handouts/03-faq-hk-guide.md) |
 | Filesystem MCP 試玩 | [`handouts/04-filesystem-mcp-guide.md`](handouts/04-filesystem-mcp-guide.md) |
 | Google Drive MCP 設定（課後自學） | [`handouts/06-google-drive-mcp-setup.md`](handouts/06-google-drive-mcp-setup.md) + [`09-google-drive-self-study.md`](handouts/09-google-drive-self-study.md) |
-| 靜態網站發佈（teacher.chw.edu.hk） | [`handouts/07-static-site-publish.md`](handouts/07-static-site-publish.md) |
+| 靜態網站發佈（活動三上線） | [`handouts/07-static-site-publish.md`](handouts/07-static-site-publish.md) |
 | **附錄：安裝清單（Cursor / Demo Login / Python）** | [`handouts/08-appendix-安裝清單.md`](handouts/08-appendix-安裝清單.md) |
 
 ---
@@ -75,12 +75,13 @@
 | 逐步 demo 腳本 | [`trainer/demo-script.md`](trainer/demo-script.md) |
 | 活動一詳細腳本 | [`trainer/activity-1-demo-script.md`](trainer/activity-1-demo-script.md) |
 | 各時段講解要點 | [`trainer/talking-points.md`](trainer/talking-points.md) |
+| 活動三詳細話術 | [`trainer/talking-points-activity3-web.md`](trainer/talking-points-activity3-web.md) |
 | 即場 troubleshooting | [`trainer/troubleshooting.md`](trainer/troubleshooting.md) |
 | 活動一：逐字稿 + 範本 + SKILL | [`activity-1-minutes/`](activity-1-minutes/) |
 | 活動二：本機文件整理 | [`activity-2-files/`](activity-2-files/) |
 | Google Drive 整理（課後自學） | [`activity-5-gdrive/`](activity-5-gdrive/) |
-| 活動三：MARP 簡報模板 | [`activity-3-marp/`](activity-3-marp/) |
-| 活動四：靜態網站（HTML/CSS/JS） | [`activity-4-web/`](activity-4-web/) |
+| 活動三：靜態網站（HTML/CSS/JS） | [`activity-3-web/`](activity-3-web/)（含 teaching-web / publish-web SKILL） |
+| MARP 簡報（課後延伸） | [`activity-4-marp/`](activity-4-marp/) |
 | API Key 範本（講者填寫） | [`config/.env.example`](config/.env.example) |
 
 ### 講者課前必做
@@ -88,9 +89,9 @@
 1. 確認學員已完成 Google Drive MCP 設定（[`handouts/06-google-drive-mcp-setup.md`](handouts/06-google-drive-mcp-setup.md)）
 2. 確認學員已完成 Cursor 安裝及 Demo Login（API Key 課後可選，見 05 指南）
 2. 複製 `config/.env.example` → `config/.env`，填入講者自己的 Key 作 demo 用
-2. 放入校徽：`activity-3-marp/assets/school-logo.png`
-3. 預跑 [`trainer/demo-script.md`](trainer/demo-script.md) 全流程
-4. 派發課前電郵（見 checklist 範本）
+3. 預跑 [`activity-3-web/starter/index.html`](activity-3-web/starter/index.html) 確認瀏覽器可開
+4. 預跑 [`trainer/demo-script.md`](trainer/demo-script.md) 全流程
+5. 派發課前電郵（見 checklist 範本）
 
 
 
@@ -98,8 +99,8 @@
 
 ## 🧩 延伸活動（課後或加堂）
 
-**活動四：生成 HTML+CSS+JS（教學用靜態網站）**
+**MARP 簡報（原活動三，改為課後）**
 
-- **目標**：用 Cursor Agent 生成一個可直接上線的靜態小工具（無需 build）
-- **素材**：`activity-4-web/`（starter + prompts）
-- **發佈**：跟 [`handouts/07-static-site-publish.md`](handouts/07-static-site-publish.md) 將靜態檔放入 NAS `_web` folder，經 `teacher.chw.edu.hk` 對外發佈
+- **素材**：[`activity-4-marp/`](activity-4-marp/)（tech 模板 + sample）
+- **Skill**：`.cursor/skills/marp-slide/`
+- **注意**：AI 生圖簡報質素参差；課堂主線已改 **活動三 靜態網站**
