@@ -1,8 +1,10 @@
 .env
 config/.env
 config/gcp-oauth.keys.json
+config/client_secret_*.json
 config/gcp-service-account.json
 config/staff-training-*.json
+config/google-forms-oauth-token.json
 .DS_Store
 activity-2-watchdog/inbox/
 activity-2-watchdog/sorted/

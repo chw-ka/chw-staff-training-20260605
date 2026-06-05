@@ -138,6 +138,36 @@ API 目前較難設定「每人限填一次」。請於 Google Forms 網頁：
 
 ---
 
+## Plan B：Admin 無法 Authorize（你而家嘅情況）
+
+若 **View Google Workspace Admin console** 只見 **Manage Google services**／**Manage app access**，冇 **Add new**／**Authorize**：
+
+- 你**唔係 Super Admin**，或學校**隱藏** Domain-wide delegation  
+- **Service Account 路線暫時走唔通**（唔係你做錯）
+
+### 改用 OAuth（你自己登入一次，建議）
+
+1. GCP project `staff-training-498501`：
+   - 啟用 **Google Forms API**
+   - **OAuth consent screen** → Internal（Workspace）或 External + Test user
+   - **Credentials** → **OAuth client ID** → **Desktop app** → 下載 JSON → `config/gcp-oauth.keys.json`
+   - Consent screen 加 scopes：`forms.body`、`drive`（或執行時會請求）
+2. 本機執行：
+
+```powershell
+pip install -r scripts/requirements-google-forms.txt
+python scripts/create_feedback_form_oauth.py
+```
+
+3. 瀏覽器用 **`kalun.chan@chw.edu.hk`** 登入並允許  
+4. 問卷會出現在你自己 Drive，唔使 Admin Authorize
+
+### Plan C：手動開表（最快）
+
+https://forms.google.com → 照 `create_feedback_form.py` 內題目逐條加入
+
+---
+
 ## 安全提示
 
 - JSON 金鑰等同密碼；外洩即他人可代您建立表單

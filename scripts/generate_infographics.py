@@ -31,8 +31,14 @@ ASPECT_BLOCK = (
 STYLE_LOCK = (
     "Style lock: flat vector infographic, white background, navy #1e3a5f primary, "
     "orange #f5a623 accent, generous whitespace, MANDATORY 16:9 landscape 1920x1080 "
-    "widescreen slide, 4K quality, CHW school staff training. Minimal English labels "
-    "only; avoid long Traditional Chinese inside the image."
+    "widescreen slide, 4K quality, CHW school staff training."
+)
+
+STYLE_WITH_TEXT = (
+    "TEXT VERSION: Render all labels, titles, and captions in clear readable ENGLISH "
+    "only. Use short phrases (not paragraphs). Large sans-serif font, high contrast, "
+    "legible on projector. Spell correctly. No Chinese characters. "
+    "MANDATORY 16:9 landscape 1920x1080 widescreen."
 )
 
 STYLE_TECH = (
@@ -48,139 +54,190 @@ NO_TEXT_BLOCK = (
     "MANDATORY 16:9 landscape 1920x1080 widescreen."
 )
 
-# Content prompts — aspect ratio enforced via ASPECT_BLOCK in script, not only here.
+# Content prompts — English text labels when --with-text; see trainer/infographic-prompt.md
 FIGURES: list[tuple[str, str, str, str | None]] = [
     (
         "fig-01-cursor-interface.png",
-        "圖1 Cursor 介面三區",
-        """Create a clean educational infographic, flat modern style, soft navy blue and warm orange accent, white background.
+        "Fig 1 Cursor Interface",
+        """Create a clean educational infographic, flat modern style, navy blue and orange accent, white background.
 
-Show a simplified desktop app window labeled "Cursor" with THREE clearly separated vertical panels:
+Show a simplified desktop app window titled "Cursor" with THREE vertical panels:
 
-LEFT panel (25% width): file explorer tree icon, folder names.
+LEFT (25%): file explorer tree, label "Files — Project folders", note "Open Folder ready"
 
-CENTER panel (50% width): document preview like Word, meeting minutes text.
+CENTER (50%): document preview like Word with meeting minutes, label "Editor — Preview results (not code)"
 
-RIGHT panel (25% width): chat/agent panel with message bubbles, highlighted with a glowing border.
+RIGHT (25%): Agent chat panel with glowing border, label "Agent — Today's focus"
 
-At the bottom, four small badge icons for keyboard shortcuts.
+Bottom badges: "Ctrl+I Agent" | "Ctrl+L Chat" | "Ctrl+, Settings" | "@ Reference files"
 
-Inside the Agent panel, annotate three spots with arrows (model dropdown, prompt input, approve button).
+Annotate Agent panel with arrows:
+1. "Model → Auto" (dropdown)
+2. "Paste Prompt" (input)
+3. "Approve — Safety gate" (button)
 
-Friendly tone for school teachers, not scary developer aesthetic. No real code.""",
+Friendly for school teachers. No real code. All text in English.""",
         None,
     ),
     (
         "fig-02-why-cursor-hk.png",
-        "圖2 點解學 Cursor",
-        """Educational comparison infographic, minimalist flowchart style, school training workshop look.
+        "Fig 2 Why Cursor (HK)",
+        """Educational comparison infographic, minimalist flowchart, school training workshop.
 
-Three-column flow left to right:
+Title: "Why learn Cursor today?"
+Subtitle: "A pro developer tool — now used by non-IT staff"
 
-Column 1 — past best chat app icon.
+Three columns left to right:
+Col 1 "Previously best": Claude Desktop icon, caption "Best for writing"
+Col 2 "Hong Kong reality": HK map + barrier, captions "Claude Desktop blocked" "Codex blocked"
+Col 3 "Today's choice": generic IDE window, caption "Cursor — API + MCP + local files"
 
-Column 2 — Hong Kong map silhouette with gentle barrier icon.
+Bottom banner: "Goal: workflow design — Cursor is the tool that works in HK"
 
-Column 3 — generic IDE window icon for Cursor-style tool.
-
-Bottom banner area for key message.
-
-Clean icons, flat design, navy/teal/white palette, suitable for projector.""",
+Navy/teal/white, clean icons, all English text.""",
         None,
     ),
     (
         "fig-03-five-concepts.png",
-        "圖3 五個核心概念",
-        """Infographic poster, five equal cards in a row, modern flat illustration for non-technical school staff.
+        "Fig 3 Five Concepts",
+        """Infographic poster, five equal cards in a row, flat illustration for school staff.
 
-Card 1 — Workflow: arrow flow input to output.
+Title: "Five Cursor concepts — take back to school"
 
-Card 2 — MCP: magical door portal to folder and cloud.
+Card 1 Workflow: arrows "Input → Steps → Output", subtitle "You = designer, AI = intern"
+Card 2 MCP: portal door to folder + cloud, subtitle "Magic door — local files; Drive after class"
+Card 3 Skills: recipe card, subtitle "Meeting minutes SKILL · File organizer SKILL"
+Card 4 Rules: checklist doc, subtitle "Formal tone, table formats"
+Card 5 Model: dropdown "Auto" + key icon, subtitle "Class: Auto; API Key optional after class"
 
-Card 3 — Skills: reusable recipe card icon.
-
-Card 4 — Rules: checklist document.
-
-Card 5 — Model: dropdown and key icon.
-
-Soft colors, professional, white background, subtle shadows.""",
+White background, soft shadows, all English labels.""",
         None,
     ),
     (
         "fig-04-boss-vs-intern.png",
-        "圖4 老闘 vs 實習文員",
-        """Friendly workplace metaphor illustration, warm cartoon-flat style (not childish), for adult teachers.
+        "Fig 4 Boss vs Intern",
+        """Friendly workplace metaphor, warm cartoon-flat style for adult teachers.
 
-A confident teacher at desk pointing right; helpful assistant agent at computer; center screen shows formatted meeting minutes (not code).
+Teacher at desk labeled "You — Workflow boss" pointing right.
+Assistant at computer labeled "Agent — Intern".
+Screen shows formatted meeting minutes (NOT code).
 
-School admin office setting. Avoid scary tech imagery.""",
+Speech bubble: "Talk on the right, watch results in the middle"
+Note: "Approve before changes — safety gate"
+Tag: "Vibe Coding — Focus on Input / Output"
+
+School office setting, encouraging tone, English text only.""",
         None,
     ),
     (
         "fig-05-90min-timeline.png",
-        "圖5 90分鐘時間軸",
-        """Horizontal timeline infographic, six milestones on one line, clean corporate-training style.
+        "Fig 5 90-min Timeline",
+        """Horizontal timeline, six milestones, corporate training style.
 
-Six milestones for a 90-minute training session: intro, setup, activity 1 minutes, activity 2 files, activity 3 static web preview, closing summary.
+Title: "CHW Staff Training — 90-minute roadmap"
 
-Connecting arrow labeled workflow. Color-coded milestones. Large icons for classroom visibility.""",
+M1 (00-10): "Intro — AI 2026" tags: Workflow, Agent
+M2 (10-20): "Setup" tags: Cursor, Auto, Appendix 08
+M3 (20-40): "Activity 1 Audio→Minutes" tags: Whisper, SKILL, Vibe Coding
+M4 (40-60): "Activity 2 File sort" tags: Talk first, Read content, Approve
+M5 (60-85): "Activity 3 Teaching web" tags: HTML/CSS/JS, Browser preview
+M6 (85-90): "Closing" tags: Privacy, Ollama, Workflow designer
+
+Arrow label: "Agentic Workflow"
+Bottom note: "Google Drive — after-class self-study (not in 90 min)"
+
+Color-coded milestones, large icons, English text.""",
         None,
     ),
     (
         "fig-06-chatbot-to-agent.png",
-        "圖6 Chatbot→Agent",
-        """Before-and-after infographic, split screen.
+        "Fig 6 Chatbot to Agent",
+        """Before-and-after split screen infographic.
 
-LEFT gray — old chatbot: single Q and single A.
+LEFT gray "Old: Chatbot": one Q bubble → one A bubble, caption "Ask and answer"
 
-RIGHT bright — new agent: goal plus 3-4 connected steps ending in approval.
+RIGHT bright "New: Agent": goal at top, 4 steps (read → process → write → approval), caption "Multi-step, you approve"
 
-Center arrow for transformation. Flat icons, training slide aesthetic.""",
+Center arrow: "2026 shift — Agentic Workflow"
+
+Bottom icons: "Activity 1 Minutes" | "Activity 2 Files" | "Activity 3 Web"
+Bottom line: "Teachers as workflow designers"
+
+Flat icons, English text, training slide style.""",
         None,
     ),
     (
         "fig-07-activity1-workflow.png",
-        "圖7 活動一 Workflow",
-        """Horizontal workflow infographic, four connected steps with arrows, school training style.
+        "Fig 7 Activity 1 Workflow",
+        """Horizontal workflow, four steps with arrows, school training style.
 
-Step 1 microphone — audio file.
-Step 2 document — transcript.
-Step 3 checklist — agenda and template.
-Step 4 formal document — meeting minutes.
+Title: "Activity 1 — Learn Workflow (meeting minutes example)"
 
-Side note box for timing. Navy/orange palette, flat icons.""",
+Step 1 mic: "Audio .m4a" subtitle "Phase 1: Whisper large-v3" note "Class: ~45s demo clip"
+Step 2 doc: "Transcript text" subtitle "Agent writes code locally — Vibe Coding"
+Step 3 checklist: "Agenda + template" subtitle "Phase 2: Auto + meeting-minutes SKILL"
+Step 4 Word doc: "Minutes .docx" subtitle "Step 3 (optional): last year format + this year content"
+
+Banner: "Vibe Coding — No need to read code; focus Input / Output"
+Side note: "1-hour audio ≈ 1-2 hours to transcribe — run locally after class"
+
+Navy/orange, English text.""",
         None,
     ),
     (
         "fig-08-activity2-files.png",
-        "圖8 活動二 執檔",
-        """Three-phase horizontal infographic, school admin training style.
+        "Fig 8 Activity 2 Files",
+        """Three-phase horizontal infographic, school admin training.
 
-Phase A talk, Phase B rules document, Phase C folder sort magic.
+Title: "Activity 2 — ~100 inbox files · sort by content"
 
-Center inbox pile of messy files. Output folders for sorted categories.
+Phase A speech bubbles: "A Talk 3-5 min" bullet "No moving files — agree rules"
+Phase B profile doc: "B Set rules 3-5 min" bullet "my_organization_profile.md"
+Phase C magic sort: "C Execute 10-12 min" bullet "Read @inbox/ → sorted/Teaching, Admin, ICT…"
 
-Navy/orange, flat vector.""",
+Center messy pile: "Messy names (1)(2) — not by file extension"
+
+Output folders: "sorted/Teaching/2025-2026/" "sorted/Admin/cross-year/" "sorted/trash/"
+
+Bottom: "Open Folder → activity-2-files · Approve each step · Demo files only"
+
+Navy/orange flat vector, English text.""",
         None,
     ),
     (
         "fig-09-activity3-marp.png",
-        "圖9 活動三 靜態網站",
-        """Web app workflow infographic, modern clean UI style, navy and orange accents.
+        "Fig 9 Activity 3 Teaching Web",
+        """Web app workflow infographic, modern clean UI, navy/orange school training style.
 
-Flow left to right: prompt to agent, HTML CSS JS files in output folder, browser preview index.html, optional copy to NAS _web folder for teacher.chw.edu.hk.
+Title: "Activity 3 — Agent builds teaching web page"
 
-Homework naming tool or small admin utility context. Not cluttered.""",
+Flow left to right:
+1. "Teaching prompt" — simulation, quiz, or simple game
+2. "Agent outputs" — index.html, styles.css, app.js → output/
+3. "Browser preview" — open index.html locally
+4. "Optional publish" — copy to NAS _web → teacher.chw.edu.hk
+
+Caption: "No PowerPoint, no build step — instant browser Wow"
+Tags: "HTML/CSS/JS" "Local preview" "Publish guide 07"
+Bottom: "Class model: Auto"
+
+English labels, professional school context, not cluttered.""",
         None,
     ),
     (
         "fig-10-closing-summary.png",
-        "圖10 總結",
-        """Closing infographic, calm professional style, white background navy text.
+        "Fig 10 Closing Summary",
+        """Closing infographic, calm professional, white background navy text.
 
-Three cards: privacy lock, demo folder only, after-class self study cloud.
+Title: "Take back to school — Workflow designer"
 
-Bottom quote banner area. Minimal text, large icons.""",
+Card 1 lock: "Sensitive data" subtitle "Student privacy → Ollama local / approved tools"
+Card 2 folder: "Demo files only" subtitle "Don't touch real Downloads / Desktop"
+Card 3 cloud: "After class" subtitle "Google Drive tidy-up → handout 09"
+
+Bottom quote: "Your value is designing workflows, not repetitive admin"
+
+Minimal text, large icons, English only.""",
         None,
     ),
 ]
@@ -206,7 +263,10 @@ def image_dimensions(data: bytes) -> tuple[int, int]:
 
 def build_prompt(content: str, style: str, no_text: bool) -> str:
     parts = [ASPECT_BLOCK, content.strip()]
-    parts.append(NO_TEXT_BLOCK if no_text else style)
+    if no_text:
+        parts.append(NO_TEXT_BLOCK)
+    else:
+        parts.extend([style, STYLE_WITH_TEXT])
     return "\n\n".join(parts)
 
 

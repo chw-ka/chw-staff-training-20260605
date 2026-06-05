@@ -1,98 +1,98 @@
 {
-  "backend": "siliconflow",
-  "model": "Qwen/Qwen-Image @ 1920x1080",
-  "no_text": true,
+  "backend": "gemini",
+  "model": "gemini-2.5-flash-image",
+  "no_text": false,
   "aspect_target": "16:9 (1920x1080)",
   "figures": [
     {
       "file": "fig-01-cursor-interface.png",
-      "title": "圖1 Cursor 介面三區",
+      "title": "Fig 1 Cursor Interface",
       "status": "ok",
-      "size_kb": 1431,
-      "width": 1920,
-      "height": 1080,
-      "aspect_ratio": 1.778
+      "size_kb": 943,
+      "width": 1344,
+      "height": 768,
+      "aspect_ratio": 1.75
     },
     {
       "file": "fig-02-why-cursor-hk.png",
-      "title": "圖2 點解學 Cursor",
+      "title": "Fig 2 Why Cursor (HK)",
       "status": "ok",
-      "size_kb": 1473,
-      "width": 1920,
-      "height": 1080,
-      "aspect_ratio": 1.778
+      "size_kb": 932,
+      "width": 1344,
+      "height": 768,
+      "aspect_ratio": 1.75
     },
     {
       "file": "fig-03-five-concepts.png",
-      "title": "圖3 五個核心概念",
+      "title": "Fig 3 Five Concepts",
       "status": "ok",
-      "size_kb": 1553,
-      "width": 1920,
-      "height": 1080,
-      "aspect_ratio": 1.778
+      "size_kb": 901,
+      "width": 1344,
+      "height": 768,
+      "aspect_ratio": 1.75
     },
     {
       "file": "fig-04-boss-vs-intern.png",
-      "title": "圖4 老闘 vs 實習文員",
+      "title": "Fig 4 Boss vs Intern",
       "status": "ok",
-      "size_kb": 1654,
-      "width": 1920,
-      "height": 1080,
-      "aspect_ratio": 1.778
+      "size_kb": 933,
+      "width": 1344,
+      "height": 768,
+      "aspect_ratio": 1.75
     },
     {
       "file": "fig-05-90min-timeline.png",
-      "title": "圖5 90分鐘時間軸",
+      "title": "Fig 5 90-min Timeline",
       "status": "ok",
-      "size_kb": 632,
-      "width": 1920,
-      "height": 1080,
-      "aspect_ratio": 1.778
+      "size_kb": 877,
+      "width": 1344,
+      "height": 768,
+      "aspect_ratio": 1.75
     },
     {
       "file": "fig-06-chatbot-to-agent.png",
-      "title": "圖6 Chatbot→Agent",
+      "title": "Fig 6 Chatbot to Agent",
       "status": "ok",
-      "size_kb": 1601,
-      "width": 1920,
-      "height": 1080,
-      "aspect_ratio": 1.778
+      "size_kb": 891,
+      "width": 1344,
+      "height": 768,
+      "aspect_ratio": 1.75
     },
     {
       "file": "fig-07-activity1-workflow.png",
-      "title": "圖7 活動一 Workflow",
+      "title": "Fig 7 Activity 1 Workflow",
       "status": "ok",
-      "size_kb": 1629,
-      "width": 1920,
-      "height": 1080,
-      "aspect_ratio": 1.778
+      "size_kb": 910,
+      "width": 1344,
+      "height": 768,
+      "aspect_ratio": 1.75
     },
     {
       "file": "fig-08-activity2-files.png",
-      "title": "圖8 活動二 執檔",
+      "title": "Fig 8 Activity 2 Files",
       "status": "ok",
-      "size_kb": 1698,
-      "width": 1920,
-      "height": 1080,
-      "aspect_ratio": 1.778
+      "size_kb": 1002,
+      "width": 1344,
+      "height": 768,
+      "aspect_ratio": 1.75
     },
     {
       "file": "fig-09-activity3-marp.png",
-      "title": "圖9 活動三 靜態網站",
+      "title": "Fig 9 Activity 3 Teaching Web",
       "status": "ok",
-      "size_kb": 1042,
-      "width": 1920,
-      "height": 1080,
-      "aspect_ratio": 1.778
+      "size_kb": 928,
+      "width": 1344,
+      "height": 768,
+      "aspect_ratio": 1.75
     },
     {
       "file": "fig-10-closing-summary.png",
-      "title": "圖10 總結",
+      "title": "Fig 10 Closing Summary",
       "status": "ok",
-      "size_kb": 1199,
-      "width": 1920,
-      "height": 1080,
-      "aspect_ratio": 1.778
+      "size_kb": 877,
+      "width": 1344,
+      "height": 768,
+      "aspect_ratio": 1.75
     }
   ]
 }
